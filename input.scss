@@ -1,0 +1,332 @@
+/*
+Theme Name: Heatons Theme
+Author: Adam White
+Description: Custom Theme For Heatons Cats
+Version: 0.0.1
+Tags: heatons
+*/
+:root {
+  --theme-blue: coral;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+html {
+  background-color: #d9e3ec;
+  height: 100%;
+  margin: 0 !important;
+}
+
+p {
+  font-family: "Cambria";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cooper", cursive;
+  color: #096a25;
+}
+
+body {
+  font-size: 16px;
+  max-width: 1600px;
+  margin: auto;
+  background-color: white;
+}
+
+main {
+  width: 95%;
+  max-width: 1500px;
+  margin: auto;
+}
+
+main p:first-child {
+  margin: 15px;
+  font-style: italic;
+  padding-left: 3px;
+}
+
+.nav-cont {
+  background-color: #0f9f39;
+  color: white;
+  font-family: "Cooper";
+}
+
+nav {
+  margin: auto;
+  text-transform: lowercase;
+}
+nav a {
+  font-size: 1.4em;
+}
+nav #menu-nav-menu {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+}
+
+nav li {
+  padding: 0.5em 1em;
+}
+
+#navigation ul {
+  list-style: none;
+}
+
+.header_logo {
+  border-radius: 15px;
+  height: 75px;
+  width: auto;
+  margin: 0.75em;
+}
+
+/* #logo {
+  height: auto;
+  width: 10%;
+  border-radius: 10%;
+  margin-top: 1em;
+} */
+header a[href="index.php"] {
+  position: relative;
+}
+
+.title-the {
+  position: absolute;
+  display: inline-block;
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.25em;
+  top: -3.25em;
+  left: -1em;
+}
+
+// Home Features
+
+.features {
+  width: 80%;
+  margin: auto;
+  padding: 2.5em;
+  display: flex;
+  justify-content: space-around;
+  h3 {
+    color: #0f9f39;
+    font-size: 2em;
+  }
+  img {
+    width: 100px;
+    height: auto;
+    padding: 0.5em;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      width: 70%;
+      margin: auto;
+      text-align: center;
+      font-size: 1.25em;
+      color: black;
+    }
+    a {
+      background-color: #096a25;
+      padding: 0.65em;
+      border-radius: 15px;
+      color: white;
+      margin: 0.5em;
+      font-family: "Cambria";
+    }
+  }
+}
+
+.jumbotron {
+  height: 600px;
+  position: relative;
+  background-image: url("images/kitten1.jpg");
+  background-position: 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0%;
+  .jumbo-content {
+    width: 32%;
+    border-radius: 15px;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0.25em;
+    h1 {
+      margin: 0.25em;
+      font-size: 3.5em;
+      color: #2c2c2c;
+    }
+    p {
+      margin: 0.75em;
+      font-size: 1.25em;
+    }
+  }
+  .btn {
+    font-family: "Cooper";
+    text-transform: lowercase;
+    padding: 0.5em;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+  }
+
+  .btn-1 {
+    background-color: #3e8e41;
+  }
+  .btn-2 {
+    background-color: #2e3d80;
+  }
+  .btn-3 {
+    background-color: #7d0000;
+  }
+}
+.cat-carousel {
+  width: 90%;
+  margin: auto;
+}
+
+.sp-pc-post-box > .sp-pc-post-image img.sp-pc-post-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+footer {
+  width: 100%;
+  background-color: #283d52;
+  color: #edeee0;
+  font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+
+footer li,
+footer p {
+  color: gray;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer .footer-desc {
+  flex-basis: 50%;
+}
+
+footer .links-col-1,
+footer .links-col-2 {
+  flex-basis: 25%;
+}
+
+/* SOCIAL MEDIA */
+.social-media {
+  list-style: none;
+  display: flex;
+  padding: 1em 0 0 0;
+  margin: auto;
+  justify-content: center;
+}
+
+.social-media li {
+  font-size: 1.5em;
+  padding: 0.3em;
+}
+
+.social-media :hover {
+  color: white;
+}
+
+.share-link {
+  display: none !important;
+}
+
+/*# sourceMappingURL=output.css.map */
+.about-us {
+  padding: 2em;
+  border: 1px solid slategray;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px black;
+  background-color: lightgray;
+}
+
+.about-us > h4 {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.row {
+  margin: auto 4%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-nav {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+}
+
+.blog-nav > li {
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.blog-nav a:hover {
+  color: var(--theme-blue);
+  transition: 0.2s;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wp-post-image {
+  width: 75%;
+  max-width: 750px;
+  height: auto;
+}
+
+@media (min-width: 1000px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .blog-nav {
+    display: flex;
+    flex-direction: row;
+    padding: 0.6em;
+    font-size: 1em;
+  }
+
+  .toggle-nav {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
