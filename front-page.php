@@ -47,12 +47,22 @@
 <section class="cat-carousel">
     <h2>Cats available for adoption</h3>
         <!-- Plugin shortcode -->
-        <?php post_carousel_id('136'); ?>
+        <?php post_carousel_id('13'); ?>
 
 
 
 </section>
 <hr>
 
+<?php
+    $args = array(
+  'numberposts' => 10
+);
+ 
+$latest_posts = get_posts( $args );
+echo '<script>';
+   echo 'console.log('. json_encode($latest_posts, JSON_HEX_TAG) .')';
+   echo '</script>';
+?>
 
 <?php get_footer(); ?>
