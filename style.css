@@ -115,11 +115,22 @@ header a[href="index.php"] {
 }
 
 .features {
-  width: 80%;
+  width: 100%;
   margin: auto;
   padding: 2.5em;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+}
+@media (min-width: 800px) {
+  .features {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1000px) {
+  .features {
+    width: 80%;
+  }
 }
 .features h3 {
   color: #0f9f39;
@@ -407,7 +418,7 @@ footer .cat-3 {
 
 h3.widget-title {
   font-size: 1.25em;
-  color: #9b9b9b;
+  color: #807f7f;
 }
 
 #menu-footer-nav.menu {

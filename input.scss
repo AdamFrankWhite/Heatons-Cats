@@ -114,11 +114,18 @@ header a[href="index.php"] {
 // Home Features
 
 .features {
-  width: 80%;
+  width: 100%;
   margin: auto;
   padding: 2.5em;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  @media (min-width: 800px) {
+    flex-direction: row;
+  }
+  @media (min-width: 1000px) {
+    width: 80%;
+  }
   h3 {
     color: #0f9f39;
     font-size: 2em;
@@ -377,7 +384,7 @@ footer {
 }
 h3.widget-title {
   font-size: 1.25em;
-  color: rgb(155, 155, 155);
+  color: #807f7f;
 }
 #menu-footer-nav.menu {
   list-style-type: none;
