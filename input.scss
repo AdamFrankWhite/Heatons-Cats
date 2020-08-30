@@ -218,6 +218,7 @@ header a[href="index.php"] {
       h4 {
         color: black;
         font-size: 1.25em;
+        margin: 0.5em 0;
       }
     }
     img {
@@ -230,6 +231,14 @@ header a[href="index.php"] {
       transition: opacity 0.3s;
     }
   }
+}
+#left,
+#right {
+  padding: 0.5em;
+}
+#left:hover,
+#right:hover {
+  cursor: pointer;
 }
 
 .sp-pc-post-box > .sp-pc-post-image img.sp-pc-post-img {

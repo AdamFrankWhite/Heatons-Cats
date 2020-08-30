@@ -225,6 +225,7 @@ header a[href="index.php"] {
 #cat-gallery .card .card-content h4 {
   color: black;
   font-size: 1.25em;
+  margin: 0.5em 0;
 }
 #cat-gallery .card img {
   width: 100%;
@@ -234,6 +235,16 @@ header a[href="index.php"] {
 #cat-gallery .card:hover {
   opacity: 0.6;
   transition: opacity 0.3s;
+}
+
+#left,
+#right {
+  padding: 0.5em;
+}
+
+#left:hover,
+#right:hover {
+  cursor: pointer;
 }
 
 .sp-pc-post-box > .sp-pc-post-image img.sp-pc-post-img {

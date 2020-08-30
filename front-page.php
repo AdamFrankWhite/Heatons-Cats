@@ -46,7 +46,8 @@
 <hr>
 <section class="cat-carousel">
     <h2>Cats available for adoption</h3>
-
+        <span id="left">left</span>
+        <span id="right">right</span>
         <div id="cat-gallery"></div>
 
 
@@ -79,9 +80,12 @@ jQuery(document).ready(function() {
 
                 )
             console.log(catGalleryData)
-            let galleryHTML = ""
-            catGalleryData.forEach(catPost => {
-                galleryHTML += `
+
+            function getGallery() {
+                let galleryHTML = ""
+                let slideView = catGalleryData.slice(0, 4)
+                slideView.forEach(catPost => {
+                    galleryHTML += `
                 <a href="${catPost.link}">
                 
                     <div class="card"> 
@@ -92,8 +96,28 @@ jQuery(document).ready(function() {
                     </div>
                 </a>
                 `
-            })
-            catGallery.innerHTML = galleryHTML
+                })
+                catGallery.innerHTML = galleryHTML
+            }
+
+            function slider(direction) {
+                if (direction == "left") {
+                    let lastCat = catGalleryData.shift()
+                    catGalleryData.push(lastCat)
+                    getGallery()
+                }
+                if (direction == "right") {
+                    let lastCat = catGalleryData.pop()
+                    catGalleryData.unshift(lastCat)
+                    getGallery()
+                }
+
+            }
+            getGallery()
+            // setInterval(slider, 3000)
+            jQuery('#left').on('click', () => slider("left"))
+            jQuery('#right').on('click', () => slider("right"))
+
 
         },
         error: function(xhr, ajaxOptions, thrownError) {
@@ -101,6 +125,10 @@ jQuery(document).ready(function() {
             $('#content').html(errorMsg);
         }
     });
+
+
+
+
 });
 </script>
 <?php get_footer(); ?>
