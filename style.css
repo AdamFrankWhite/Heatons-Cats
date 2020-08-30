@@ -198,7 +198,7 @@ header a[href="index.php"] {
 
 .cat-gallery-section {
   width: 90%;
-  margin: auto;
+  margin: 2em auto;
 }
 
 .cat-gallery-cont {
@@ -303,14 +303,16 @@ header a[href="index.php"] {
   border-radius: 10px;
   margin-bottom: 1em;
   display: flex;
+  align-items: flex-start;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-@media (min-width: 1220px) {
+@media (max-width: 550px) {
   .partners-notices .partners .partner-card,
 .partners-notices .notices .partner-card {
-    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
   }
 }
 .partners-notices .partners .partner-card img,

@@ -198,7 +198,7 @@ header a[href="index.php"] {
 }
 .cat-gallery-section {
   width: 90%;
-  margin: auto;
+  margin: 2em auto;
 }
 .cat-gallery-cont {
   display: flex;
@@ -287,10 +287,13 @@ header a[href="index.php"] {
       border-radius: 10px;
       margin-bottom: 1em;
       display: flex;
-      justify-content: center;
-      @media (min-width: 1220px) {
-        align-items: flex-start;
+      align-items: flex-start;
+      @media (max-width: 550px) {
+        flex-direction: column;
+        text-align: center;
       }
+      justify-content: center;
+
       align-items: center;
       width: 100%;
       img {

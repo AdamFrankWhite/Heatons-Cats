@@ -52,10 +52,9 @@
             <i id="right" class="fa fa-chevron-circle-right" aria-hidden="true"></i>
         </div>
 
-
-
 </section>
 <hr>
+
 <section class="partners-notices">
     <div class="partners">
         <h3>Our Partners</h3>

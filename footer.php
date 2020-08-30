@@ -34,9 +34,9 @@ dynamic_sidebar('footer-sidebar-3');
         </ul>
 
     </div>
-    <a target="_blank" href="https://icons8.com/icons/set/cat-cage--v2">Cat Cage</a>, <a target="_blank"
+    <!-- <a target="_blank" href="https://icons8.com/icons/set/cat-cage--v2">Cat Cage</a>, <a target="_blank"
         href="https://icons8.com/icons/set/cat-footprint">Cat Footprint</a> and other icons by <a target="_blank"
-        href="https://icons8.com">Icons8</a>
+        href="https://icons8.com">Icons8</a> -->
 
     <hr>
     <ul class="social-media">
