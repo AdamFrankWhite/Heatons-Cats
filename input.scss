@@ -274,7 +274,7 @@ header a[href="index.php"] {
     justify-content: space-evenly;
   }
   width: 90%;
-  margin: auto;
+  margin: 2em auto 12em auto;
   .partners,
   .notices {
     display: block;
@@ -315,23 +315,79 @@ header a[href="index.php"] {
 }
 
 footer {
+  position: relative;
   width: 100%;
-  background-color: #283d52;
-  color: #edeee0;
+  background-color: #3b3b3b;
   font-family: "Arial Narrow", Arial, sans-serif;
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+  }
+  h4 {
+    font-size: 1.25em;
+    color: rgb(155, 155, 155);
+  }
+  ul,
+  li,
+  p {
+    color: rgb(201, 201, 201);
+  }
+  .cat-1,
+  .cat-2,
+  .cat-3 {
+    position: absolute;
+    @media (max-width: 1120px) {
+      width: 110px;
+      height: auto;
+    }
+  }
+  .cat-1 {
+    left: 5%;
+    width: 9vw;
+    height: auto;
+    top: -8vw;
+    @media (max-width: 1120px) {
+      top: -85px;
+    }
+  }
+  .cat-2 {
+    left: 25%;
+    width: 13vw;
+    min-width: 110px;
+    height: auto;
+    top: -10vw;
+    @media (max-width: 1120px) {
+      top: -110px;
+    }
+  }
+  .cat-3 {
+    right: 7%;
+    width: 10vw;
+    min-width: 110px;
+    height: auto;
+    top: -7vw;
+    @media (max-width: 1120px) {
+      top: -80px;
+    }
+  }
 }
-
-footer .footer-content {
-  display: flex;
-  justify-content: center;
-  padding: 2em;
+h3.widget-title {
+  font-size: 1.25em;
+  color: rgb(155, 155, 155);
 }
-
-footer li,
-footer p {
-  color: gray;
+#menu-footer-nav.menu {
+  list-style-type: none;
+  padding: 0;
+  a {
+    color: #c9c9c9;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
 }
-
+.links-col-2 div.textwidget > a {
+  color: #c9c9c9;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
 footer li {
   list-style: none;
 }

@@ -275,7 +275,7 @@ header a[href="index.php"] {
 
 .partners-notices {
   width: 90%;
-  margin: auto;
+  margin: 2em auto 12em auto;
 }
 .partners-notices h3 {
   font-size: 1.5em;
@@ -335,21 +335,91 @@ header a[href="index.php"] {
   }
 }
 footer {
+  position: relative;
   width: 100%;
-  background-color: #283d52;
-  color: #edeee0;
+  background-color: #3b3b3b;
   font-family: "Arial Narrow", Arial, sans-serif;
 }
-
 footer .footer-content {
   display: flex;
   justify-content: center;
   padding: 2em;
 }
-
+footer h4 {
+  font-size: 1.25em;
+  color: #9b9b9b;
+}
+footer ul,
 footer li,
 footer p {
-  color: gray;
+  color: #c9c9c9;
+}
+footer .cat-1,
+footer .cat-2,
+footer .cat-3 {
+  position: absolute;
+}
+@media (max-width: 1120px) {
+  footer .cat-1,
+footer .cat-2,
+footer .cat-3 {
+    width: 110px;
+    height: auto;
+  }
+}
+footer .cat-1 {
+  left: 5%;
+  width: 9vw;
+  height: auto;
+  top: -8vw;
+}
+@media (max-width: 1120px) {
+  footer .cat-1 {
+    top: -85px;
+  }
+}
+footer .cat-2 {
+  left: 25%;
+  width: 13vw;
+  min-width: 110px;
+  height: auto;
+  top: -10vw;
+}
+@media (max-width: 1120px) {
+  footer .cat-2 {
+    top: -110px;
+  }
+}
+footer .cat-3 {
+  right: 7%;
+  width: 10vw;
+  min-width: 110px;
+  height: auto;
+  top: -7vw;
+}
+@media (max-width: 1120px) {
+  footer .cat-3 {
+    top: -80px;
+  }
+}
+
+h3.widget-title {
+  font-size: 1.25em;
+  color: #9b9b9b;
+}
+
+#menu-footer-nav.menu {
+  list-style-type: none;
+  padding: 0;
+}
+#menu-footer-nav.menu a {
+  color: #c9c9c9;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.links-col-2 div.textwidget > a {
+  color: #c9c9c9;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 footer li {

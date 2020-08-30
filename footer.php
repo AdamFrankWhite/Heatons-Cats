@@ -1,24 +1,36 @@
 <footer>
+    <img class="cat-1" src="<?php bloginfo('template_url');?>/images/cat-5.svg" />
+    <img class="cat-2" src="<?php bloginfo('template_url');?>/images/cat-3.svg" />
+    <img class="cat-3" src="<?php bloginfo('template_url');?>/images/cat-1.svg" />
     <div class="footer-content">
         <ul class="footer-desc">
-            <h3>Catopolis</h3>
-            <p>
-                Catopolis is your resources for cat knowledge, food, litter and toy recommendations, advice,
-                interesting
-                tidbits, and of course, cute cat pictures.
-            </p>
+            <?php
+if(is_active_sidebar('footer-sidebar-1')){
+dynamic_sidebar('footer-sidebar-1');
+}
+?>
         </ul>
         <ul class="links-col-1">
-            <h3>About</h3>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
+            <!-- <h4>About</h3>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li> -->
+            <?php
+if(is_active_sidebar('footer-sidebar-2')){
+dynamic_sidebar('footer-sidebar-2');
+}
+?>
         </ul>
         <ul class="links-col-2">
-            <h3>Quick Links</h3>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
+            <!-- <h4>Quick Links</h3>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li> -->
+            <?php
+if(is_active_sidebar('footer-sidebar-3')){
+dynamic_sidebar('footer-sidebar-3');
+}
+?>
         </ul>
 
     </div>
