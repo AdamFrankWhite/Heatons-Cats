@@ -128,48 +128,16 @@ jQuery(document).ready(function() {
                     getGallery(1)
                 }
             }
+            //On load
             checkScreenWidth()
 
-            // setInterval(slider, 3000)
+            //Media queries
+            window.addEventListener('resize', checkScreenWidth)
+            //Button listens
             jQuery('#left').on('click', () => slider("left"))
             jQuery('#right').on('click', () => slider("right"))
 
-            //Media queries
-            function myFunction(w) {
-                if (x.matches) { // If media query matches
-                    getGallery(4)
-                }
-            }
 
-            function myFunction2(x) {
-                if (x.matches) { // If media query matches
-                    getGallery(3)
-                }
-            }
-
-            function myFunction3(y) {
-                if (y.matches) { // If media query matches
-                    getGallery(2)
-                }
-            }
-
-            function myFunction4(z) {
-                if (z.matches) { // If media query matches
-                    getGallery(1)
-                }
-            }
-            var w = window.matchMedia("(min-width: 1400px)")
-            myFunction(w) // Call listener function at run time
-            w.addListener(myFunction) // Attach listener function on state changes
-            var x = window.matchMedia("(min-width: 1021px) and (max-width: 1399px)")
-            myFunction(x) // Call listener function at run time
-            x.addListener(myFunction2) // Attach listener function on state changes
-            var y = window.matchMedia("(min-width: 731px) and (max-width: 1020px)")
-            myFunction(y) // Call listener function at run time
-            y.addListener(myFunction3) // Attach listener function on state changes
-            var z = window.matchMedia("(min-width: 1px) and (max-width: 730px)")
-            myFunction(z) // Call listener function at run time
-            z.addListener(myFunction4) // Attach listener function on state changes
 
 
         },
