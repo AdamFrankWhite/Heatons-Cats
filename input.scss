@@ -210,14 +210,14 @@ header a[href="index.php"] {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: 1.5em;
-  @media (max-width: 1200px) {
+  grid-column-gap: 1.25em;
+  @media (max-width: 1400px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1020px) {
     grid-template-columns: 1fr 1fr;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 730px) {
     grid-template-columns: 1fr;
   }
 

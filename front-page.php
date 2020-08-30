@@ -83,9 +83,9 @@ jQuery(document).ready(function() {
                 )
             console.log(catGalleryData)
 
-            function getGallery() {
+            function getGallery(numSlides = 4) {
                 let galleryHTML = ""
-                let slideView = catGalleryData.slice(0, 4)
+                let slideView = catGalleryData.slice(0, numSlides)
                 slideView.forEach(catPost => {
                     galleryHTML += `
                 <a href="${catPost.link}">
@@ -106,18 +106,70 @@ jQuery(document).ready(function() {
                 if (direction == "left") {
                     let lastCat = catGalleryData.shift()
                     catGalleryData.push(lastCat)
-                    getGallery()
+                    checkScreenWidth()
                 } else {
                     let lastCat = catGalleryData.pop()
                     catGalleryData.unshift(lastCat)
-                    getGallery()
+                    checkScreenWidth()
                 }
 
             }
-            getGallery()
+            // Get screen width
+            function checkScreenWidth() {
+                let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+                console.log(width)
+                if (width > 1400) {
+                    getGallery(4)
+                } else if (width <= 1400 && width >= 1021) {
+                    getGallery(3)
+                } else if (width < 1021 && width >= 731) {
+                    getGallery(2)
+                } else if (width <= 730) {
+                    getGallery(1)
+                }
+            }
+            checkScreenWidth()
+
             // setInterval(slider, 3000)
             jQuery('#left').on('click', () => slider("left"))
             jQuery('#right').on('click', () => slider("right"))
+
+            //Media queries
+            function myFunction(w) {
+                if (x.matches) { // If media query matches
+                    getGallery(4)
+                }
+            }
+
+            function myFunction2(x) {
+                if (x.matches) { // If media query matches
+                    getGallery(3)
+                }
+            }
+
+            function myFunction3(y) {
+                if (y.matches) { // If media query matches
+                    getGallery(2)
+                }
+            }
+
+            function myFunction4(z) {
+                if (z.matches) { // If media query matches
+                    getGallery(1)
+                }
+            }
+            var w = window.matchMedia("(min-width: 1400px)")
+            myFunction(w) // Call listener function at run time
+            w.addListener(myFunction) // Attach listener function on state changes
+            var x = window.matchMedia("(min-width: 1021px) and (max-width: 1399px)")
+            myFunction(x) // Call listener function at run time
+            x.addListener(myFunction2) // Attach listener function on state changes
+            var y = window.matchMedia("(min-width: 731px) and (max-width: 1020px)")
+            myFunction(y) // Call listener function at run time
+            y.addListener(myFunction3) // Attach listener function on state changes
+            var z = window.matchMedia("(min-width: 1px) and (max-width: 730px)")
+            myFunction(z) // Call listener function at run time
+            z.addListener(myFunction4) // Attach listener function on state changes
 
 
         },
