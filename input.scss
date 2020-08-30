@@ -196,8 +196,18 @@ header a[href="index.php"] {
     background-color: #7d0000;
   }
 }
-
+.cat-gallery-section {
+  padding: 2%;
+}
+.cat-gallery-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 #cat-gallery {
+  width: 90%;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 1.5em;
@@ -235,6 +245,7 @@ header a[href="index.php"] {
 #left,
 #right {
   padding: 0.5em;
+  font-size: 2em;
 }
 #left:hover,
 #right:hover {

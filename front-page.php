@@ -44,11 +44,13 @@
 
 </div>
 <hr>
-<section class="cat-carousel">
+<section class="cat-gallery-section">
     <h2>Cats available for adoption</h3>
-        <span id="left">left</span>
-        <span id="right">right</span>
-        <div id="cat-gallery"></div>
+        <div class="cat-gallery-cont">
+            <i id="left" class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+            <div id="cat-gallery"></div>
+            <i id="right" class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+        </div>
 
 
 
@@ -105,8 +107,7 @@ jQuery(document).ready(function() {
                     let lastCat = catGalleryData.shift()
                     catGalleryData.push(lastCat)
                     getGallery()
-                }
-                if (direction == "right") {
+                } else {
                     let lastCat = catGalleryData.pop()
                     catGalleryData.unshift(lastCat)
                     getGallery()
@@ -131,4 +132,5 @@ jQuery(document).ready(function() {
 
 });
 </script>
+
 <?php get_footer(); ?>
