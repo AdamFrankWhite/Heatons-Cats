@@ -48,21 +48,57 @@
     <h2>Cats available for adoption</h3>
         <!-- Plugin shortcode -->
         <?php post_carousel_id('13'); ?>
+        <div id="cat-gallery"></div>
 
 
 
 </section>
 <hr>
 
-<?php
-    $args = array(
-  'numberposts' => 10
-);
- 
-$latest_posts = get_posts( $args );
-echo '<script>';
-   echo 'console.log('. json_encode($latest_posts, JSON_HEX_TAG) .')';
-   echo '</script>';
-?>
 
+<script>
+jQuery(document).ready(function() {
+    //Perform Ajax request.
+    jQuery.ajax({
+        url: 'http://localhost/heatons/wp-json/wp/v2/posts?_embed',
+        type: 'get',
+        success: function(data) {
+            const catPosts = data
+            console.log(catPosts)
+            const catGallery = document.getElementById('cat-gallery')
+            // Check categories only cats/kitten
+            let catGalleryData = catPosts.filter(post => post.categories.includes(2) || post
+                    .categories.includes(3))
+                .map(post => {
+                        return {
+
+                            name: post.title.rendered,
+                            img_url: post.better_featured_image.source_url,
+                            link: post.link
+                        }
+                    }
+
+                )
+            console.log(catGalleryData)
+            let galleryHTML = ""
+            catGalleryData.forEach(catPost => {
+                galleryHTML += `
+                <a href="${catPost.link}">
+                    <div class="card"> 
+                        <img src="${catPost.img_url}" alt=${catPost.name}/>
+                        <h4>${catPost.name}</h4>
+                        </div>
+                        </a>
+                `
+            })
+            catGallery.innerHTML = galleryHTML
+
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+            var errorMsg = 'Ajax request failed: ' + xhr.responseText;
+            $('#content').html(errorMsg);
+        }
+    });
+});
+</script>
 <?php get_footer(); ?>
