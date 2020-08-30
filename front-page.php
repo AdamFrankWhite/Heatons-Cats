@@ -56,8 +56,69 @@
 
 </section>
 <hr>
+<section class="partners-notices">
+    <div class="partners">
+        <h3>Our Partners</h3>
+        <?php
+        $args  = array(
+    'posts_per_page'  => 5,
+    'category'        => 6,
+    'orderby'         => 'post_date',
+    'order'           => 'ASC',
+    'post_type'       => 'post',
+    'post_status'     => 'publish',
+    'suppress_filters' => true ); 
+$posts = get_posts($args);
+    foreach ($posts as $post) :
+    ?><div class="partner-card">
+            <?php the_post_thumbnail();?>
+            <div class="partner-card-content">
+                <h4><?php the_title();?></h4>
+                <p><?php the_content();?></p>
+            </div>
+        </div>
+        <?php endforeach; ?>
+
+    </div>
+    <div class="notices">
+        <h3>Notices</h3>
+        <?php
+        $args  = array(
+    'posts_per_page'  => 5,
+    'category'        => 7,
+    'orderby'         => 'post_date',
+    'order'           => 'ASC',
+    'post_type'       => 'post',
+    'post_status'     => 'publish',
+    'suppress_filters' => true ); 
+$posts = get_posts($args);
+    foreach ($posts as $post) :
+    ?><div class="partner-card">
+            <?php the_post_thumbnail();?>
+            <div class="partner-card-content">
+                <h4><?php the_title();?></h4>
+                <p><?php the_content();?></p>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</section>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Cat Slideshow -->
 <script>
 jQuery(document).ready(function() {
     //Perform Ajax request.

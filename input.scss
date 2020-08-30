@@ -197,7 +197,8 @@ header a[href="index.php"] {
   }
 }
 .cat-gallery-section {
-  padding: 2%;
+  width: 90%;
+  margin: auto;
 }
 .cat-gallery-cont {
   display: flex;
@@ -206,7 +207,7 @@ header a[href="index.php"] {
   align-items: center;
 }
 #cat-gallery {
-  width: 90%;
+  width: 100%;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -260,6 +261,57 @@ header a[href="index.php"] {
 .sp-pc-post > .sp-pc-post-box:hover {
   opacity: 0.6;
   transition: opacity 0.2s;
+}
+
+// Partners/Notices
+
+.partners-notices {
+  h3 {
+    font-size: 1.5em;
+  }
+  @media (min-width: 1220px) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  width: 90%;
+  margin: auto;
+  .partners,
+  .notices {
+    display: block;
+    @media (min-width: 1220px) {
+      width: 45%;
+    }
+    .partner-card {
+      border: 1px lightgray solid;
+      box-shadow: 1px 1px 3px gray;
+      border-radius: 10px;
+      margin-bottom: 1em;
+      display: flex;
+      justify-content: center;
+      @media (min-width: 1220px) {
+        align-items: flex-start;
+      }
+      align-items: center;
+      width: 100%;
+      img {
+        padding: 1em;
+        width: 150px;
+        height: 150px;
+      }
+      .partner-card-content {
+        h4 {
+          font-weight: bold;
+          @media (min-width: 1220px) {
+            margin: 0 auto 0.5em auto;
+          }
+          font-size: 1.25em;
+        }
+        p {
+        }
+        padding: 1em;
+      }
+    }
+  }
 }
 
 footer {
