@@ -196,9 +196,44 @@ header a[href="index.php"] {
   background-color: #7d0000;
 }
 
-.cat-carousel {
-  width: 90%;
-  margin: auto;
+#cat-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1.5em;
+}
+@media (max-width: 1200px) {
+  #cat-gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 1000px) {
+  #cat-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  #cat-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+#cat-gallery .card {
+  box-shadow: lightgray 0px 0px 10px;
+}
+#cat-gallery .card .card-content {
+  padding: 1em;
+}
+#cat-gallery .card .card-content h4 {
+  color: black;
+  font-size: 1.25em;
+}
+#cat-gallery .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+#cat-gallery .card:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
 }
 
 .sp-pc-post-box > .sp-pc-post-image img.sp-pc-post-img {

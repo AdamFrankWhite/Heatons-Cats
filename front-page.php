@@ -46,8 +46,7 @@
 <hr>
 <section class="cat-carousel">
     <h2>Cats available for adoption</h3>
-        <!-- Plugin shortcode -->
-        <?php post_carousel_id('13'); ?>
+
         <div id="cat-gallery"></div>
 
 
@@ -84,11 +83,14 @@ jQuery(document).ready(function() {
             catGalleryData.forEach(catPost => {
                 galleryHTML += `
                 <a href="${catPost.link}">
+                
                     <div class="card"> 
-                        <img src="${catPost.img_url}" alt=${catPost.name}/>
-                        <h4>${catPost.name}</h4>
+                        <div class="card-content">
+                            <img src="${catPost.img_url}" alt=${catPost.name}/>
+                            <h4>${catPost.name}</h4>
                         </div>
-                        </a>
+                    </div>
+                </a>
                 `
             })
             catGallery.innerHTML = galleryHTML
