@@ -333,6 +333,10 @@ footer {
     display: flex;
     justify-content: center;
     padding: 2em;
+    @media (min-width: 1200px) {
+      width: 95%;
+      margin: auto;
+    }
   }
   h4 {
     font-size: 1.25em;

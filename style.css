@@ -358,6 +358,12 @@ footer .footer-content {
   justify-content: center;
   padding: 2em;
 }
+@media (min-width: 1200px) {
+  footer .footer-content {
+    width: 95%;
+    margin: auto;
+  }
+}
 footer h4 {
   font-size: 1.25em;
   color: #9b9b9b;
