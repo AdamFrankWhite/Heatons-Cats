@@ -353,15 +353,21 @@ header a[href="index.php"] {
   }
 }
 .page-cont {
-  width: 80%;
+  width: 98%;
   margin: 2em auto 15em auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-@media (min-width: 650px) {
+@media (min-width: 1200px) {
   .page-cont {
     flex-direction: row;
+    width: 90%;
+  }
+}
+@media (min-width: 650px) and (max-width: 1199px) {
+  .page-cont {
+    width: 85%;
   }
 }
 .page-cont .category-content {
@@ -369,6 +375,21 @@ header a[href="index.php"] {
 }
 .page-cont .blog-sidebar {
   flex-basis: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+@media (max-width: 625px) {
+  .page-cont .blog-sidebar {
+    margin-top: 3em;
+  }
+}
+@media (min-width: 625px) and (max-width: 1050px) {
+  .page-cont .blog-sidebar {
+    flex-direction: row;
+    font-size: 2vw;
+  }
 }
 
 .category-content {
@@ -388,6 +409,7 @@ header a[href="index.php"] {
 .category-content .adoption-heading h1 {
   margin-top: 0.15em;
   margin-bottom: 0;
+  text-align: center;
 }
 .category-content .adoption-heading hr {
   color: 1px solid gray;
@@ -400,12 +422,17 @@ header a[href="index.php"] {
 
 .cat-card {
   display: flex;
-  height: 200px;
+  flex-direction: column;
   background-color: white;
   border: gray solid 1px;
   box-shadow: lightgray 1px 1px 3px;
   border-radius: 10px;
   margin-bottom: 1em;
+}
+@media (min-width: 650px) {
+  .cat-card {
+    flex-direction: row;
+  }
 }
 .cat-card .cat-card-content {
   padding: 1em;
@@ -417,20 +444,31 @@ header a[href="index.php"] {
 }
 .cat-card a {
   color: #053f15;
-  flex-basis: 30%;
+  flex-basis: 40%;
   font-size: 1.5em;
   font-family: Cooper, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+@media (min-width: 1050px) {
+  .cat-card a {
+    flex-basis: 30%;
+  }
 }
 .cat-card a:hover {
   color: orange;
   transition: color 0.15s;
 }
 .cat-card a .wp-post-image {
-  height: 100%;
+  height: 250px;
   width: 100%;
   padding: 0.25em;
   border-radius: 15px;
   object-fit: cover;
+}
+@media (min-width: 1050px) {
+  .cat-card a .wp-post-image {
+    height: 100%;
+    width: 100%;
+  }
 }
 .cat-card a .wp-post-image:hover {
   opacity: 0.7;
@@ -438,6 +476,7 @@ header a[href="index.php"] {
 }
 
 .adopt-side-widget {
+  flex-basis: 40%;
   padding: 2em;
   margin-bottom: 3em;
   border: 1px solid #707070;
@@ -455,7 +494,7 @@ header a[href="index.php"] {
 .adopt-side-widget .widget-title {
   border-bottom: 1px solid #707070;
   text-align: center;
-  width: 60%;
+  width: 70%;
   margin: auto;
   padding-bottom: 0.5em;
   color: #096a25;
@@ -468,6 +507,12 @@ header a[href="index.php"] {
   text-align: center;
   font-weight: bold;
   color: #0f9f39;
+}
+@media (max-width: 850px) {
+  .adopt-side-widget .phone-num,
+.adopt-side-widget .email-text {
+    font-size: 1em;
+  }
 }
 .adopt-side-widget .email-text {
   font-size: 1.5em;
