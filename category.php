@@ -10,7 +10,7 @@ get_header(); ?>
         <div class="adoption-heading">
             <hr>
             <img src="<?php bloginfo('template_url'); ?>/images/icons/icons8-cat-footprint.svg" />
-            <h1>Cats available for adoption</h1>
+            <h1><span class="capitalise"><?php single_cat_title();?></span> available for adoption</h1>
             <hr>
         </div>
 
@@ -20,7 +20,7 @@ get_header(); ?>
             foreach( $myposts as $post ) :	setup_postdata($post);
         ?>
         <div class="cat-card">
-            <?php the_post_thumbnail() ?>
+            <a href="<?php the_permalink();?>"><?php the_post_thumbnail() ?></a>
             <div class="cat-card-content">
 
                 <a href="<?php the_permalink();?>"><?php the_title(); ?></a>

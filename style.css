@@ -5,10 +5,6 @@ Description: Custom Theme For Heatons Cats
 Version: 0.0.1
 Tags: heatons
 */
-:root {
-  --theme-blue: coral;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -43,6 +39,15 @@ body {
   max-width: 1600px;
   margin: auto;
   background-color: white;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.capitalise {
+  text-transform: capitalize;
 }
 
 main {
@@ -348,20 +353,27 @@ header a[href="index.php"] {
   }
 }
 .page-cont {
-  width: 90%;
+  width: 80%;
   margin: 2em auto 15em auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+@media (min-width: 650px) {
+  .page-cont {
+    flex-direction: row;
+  }
 }
 .page-cont .category-content {
   flex-basis: 60%;
 }
 .page-cont .blog-sidebar {
-  flex-basis: 35%;
+  flex-basis: 30%;
 }
 
 .category-content {
   background-color: #eef2f5;
+  border: 1px solid #707070;
   border-radius: 10px;
   padding: 2em;
   display: block;
@@ -378,7 +390,7 @@ header a[href="index.php"] {
   margin-bottom: 0;
 }
 .category-content .adoption-heading hr {
-  border: 1px solid gray;
+  color: 1px solid gray;
   width: 70%;
 }
 .category-content .adoption-heading img {
@@ -388,7 +400,7 @@ header a[href="index.php"] {
 
 .cat-card {
   display: flex;
-  height: 250px;
+  height: 200px;
   background-color: white;
   border: gray solid 1px;
   box-shadow: lightgray 1px 1px 3px;
@@ -398,21 +410,75 @@ header a[href="index.php"] {
 .cat-card .cat-card-content {
   padding: 1em;
   overflow: hidden;
+  flex-basis: 70%;
 }
 .cat-card .cat-card-content p {
   line-height: 1.25em;
 }
 .cat-card a {
   color: #053f15;
-  width: 100%;
+  flex-basis: 30%;
   font-size: 1.5em;
   font-family: Cooper, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-.cat-card img {
-  width: 30%;
-  margin: 1em;
+.cat-card a:hover {
+  color: orange;
+  transition: color 0.15s;
+}
+.cat-card a .wp-post-image {
+  height: 100%;
+  width: 100%;
+  padding: 0.25em;
   border-radius: 15px;
   object-fit: cover;
+}
+.cat-card a .wp-post-image:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.adopt-side-widget {
+  padding: 2em;
+  margin-bottom: 3em;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px lightgray;
+  background-color: #eef2f5;
+}
+.adopt-side-widget a {
+  color: orange;
+}
+.adopt-side-widget img {
+  display: block;
+  margin: auto;
+}
+.adopt-side-widget .widget-title {
+  border-bottom: 1px solid #707070;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  padding-bottom: 0.5em;
+  color: #096a25;
+  font-size: 1.5em;
+}
+.adopt-side-widget .phone-num,
+.adopt-side-widget .email-text {
+  margin: 0.5em;
+  font-family: Cooper, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+  font-weight: bold;
+  color: #0f9f39;
+}
+.adopt-side-widget .email-text {
+  font-size: 1.5em;
+}
+.adopt-side-widget .phone-num {
+  font-size: 2.25em;
+}
+
+.about-us > h4 {
+  font-weight: bold;
+  font-size: 2em;
 }
 
 footer {
@@ -545,19 +611,6 @@ footer .links-col-2 {
 }
 
 /*# sourceMappingURL=output.css.map */
-.about-us {
-  padding: 2em;
-  border: 1px solid slategray;
-  border-radius: 5px;
-  box-shadow: 1px 1px 3px black;
-  background-color: lightgray;
-}
-
-.about-us > h4 {
-  font-weight: bold;
-  font-size: 2em;
-}
-
 .row {
   margin: auto 4%;
   display: flex;
@@ -578,9 +631,9 @@ footer .links-col-2 {
   letter-spacing: 1px;
 }
 
-.blog-nav a:hover {
-  color: var(--theme-blue);
-  transition: 0.2s;
+.blog-nav .menu-item a:hover {
+  color: orange !important;
+  transition: color 0.2s;
 }
 
 header {

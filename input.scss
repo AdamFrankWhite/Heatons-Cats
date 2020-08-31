@@ -5,9 +5,9 @@ Description: Custom Theme For Heatons Cats
 Version: 0.0.1
 Tags: heatons
 */
-:root {
-    --theme-blue: coral;
-}
+
+$darkgreen: #096a25;
+$lightgreen: #0f9f39;
 
 * {
     box-sizing: border-box;
@@ -34,7 +34,7 @@ h4,
 h5,
 h6 {
     font-family: "Cooper", cursive;
-    color: #096a25;
+    color: $darkgreen;
 }
 
 body {
@@ -44,6 +44,14 @@ body {
     background-color: white;
 }
 
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+.capitalise {
+    text-transform: capitalize;
+}
 main {
     width: 95%;
     max-width: 1500px;
@@ -57,7 +65,7 @@ main p:first-child {
 }
 
 .nav-cont {
-    background-color: #0f9f39;
+    background-color: $lightgreen;
     color: white;
     font-family: "Cooper";
 }
@@ -127,7 +135,7 @@ header a[href="index.php"] {
         width: 80%;
     }
     h3 {
-        color: #0f9f39;
+        color: $lightgreen;
         font-size: 2em;
     }
     img {
@@ -149,7 +157,7 @@ header a[href="index.php"] {
             color: black;
         }
         a {
-            background-color: #096a25;
+            background-color: $darkgreen;
             padding: 0.65em;
             border-radius: 15px;
             color: white;
@@ -327,20 +335,25 @@ header a[href="index.php"] {
 //Pages
 
 .page-cont {
-    width: 90%;
+    width: 80%;
     margin: 2em auto 15em auto;
     display: flex;
+    flex-direction: column;
+    @media (min-width: 650px) {
+        flex-direction: row;
+    }
     justify-content: space-between;
 
     .category-content {
         flex-basis: 60%;
     }
     .blog-sidebar {
-        flex-basis: 35%;
+        flex-basis: 30%;
     }
 }
 .category-content {
     background-color: #eef2f5;
+    border: 1px solid #707070;
     border-radius: 10px;
     padding: 2em;
     display: block;
@@ -355,7 +368,7 @@ header a[href="index.php"] {
             margin-bottom: 0;
         }
         hr {
-            border: 1px solid gray;
+            color: 1px solid gray;
             width: 70%;
         }
         img {
@@ -366,7 +379,7 @@ header a[href="index.php"] {
 }
 .cat-card {
     display: flex;
-    height: 250px;
+    height: 200px;
     background-color: white;
     border: gray solid 1px;
     box-shadow: lightgray 1px 1px 3px;
@@ -375,23 +388,83 @@ header a[href="index.php"] {
     .cat-card-content {
         padding: 1em;
         overflow: hidden;
+        flex-basis: 70%;
         p {
             line-height: 1.25em;
         }
     }
     a {
         color: #053f15;
-        width: 100%;
+        flex-basis: 30%;
+        // width: 100%;
         font-size: 1.5em;
         font-family: Cooper, Cochin, Georgia, Times, "Times New Roman", serif;
-    }
-    img {
-        width: 30%;
-        margin: 1em;
-        border-radius: 15px;
-        object-fit: cover;
+        &:hover {
+            color: orange;
+            transition: color 0.15s;
+        }
+        .wp-post-image {
+            height: 100%;
+            width: 100%;
+            padding: 0.25em;
+            // margin: 1em;
+            border-radius: 15px;
+            object-fit: cover;
+            &:hover {
+                opacity: 0.7;
+                transition: 0.2s;
+            }
+        }
     }
 }
+
+//Sidebar
+
+.adopt-side-widget {
+    padding: 2em;
+    margin-bottom: 3em;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px lightgray;
+    background-color: #eef2f5;
+    a {
+        color: orange;
+    }
+    img {
+        display: block;
+        margin: auto;
+    }
+    .widget-title {
+        border-bottom: 1px solid #707070;
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        padding-bottom: 0.5em;
+        color: $darkgreen;
+        font-size: 1.5em;
+    }
+    .phone-num,
+    .email-text {
+        margin: 0.5em;
+        font-family: Cooper, Cochin, Georgia, Times, "Times New Roman", serif;
+        text-align: center;
+        font-weight: bold;
+        color: $lightgreen;
+    }
+    .email-text {
+        font-size: 1.5em;
+    }
+    .phone-num {
+        font-size: 2.25em;
+    }
+}
+
+.about-us > h4 {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+//Footer
 
 footer {
     position: relative;
@@ -507,18 +580,6 @@ footer .links-col-2 {
 }
 
 /*# sourceMappingURL=output.css.map */
-.about-us {
-    padding: 2em;
-    border: 1px solid slategray;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px black;
-    background-color: lightgray;
-}
-
-.about-us > h4 {
-    font-weight: bold;
-    font-size: 2em;
-}
 
 .row {
     margin: auto 4%;
@@ -540,9 +601,9 @@ footer .links-col-2 {
     letter-spacing: 1px;
 }
 
-.blog-nav a:hover {
-    color: var(--theme-blue);
-    transition: 0.2s;
+.blog-nav .menu-item a:hover {
+    color: orange !important;
+    transition: color 0.2s;
 }
 
 header {

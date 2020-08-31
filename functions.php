@@ -54,12 +54,30 @@ function arphabet_widgets_init() {
     'before_title' => '<h3 class="widget-title">',
     'after_title' => '</h3>',
     ) );
+    register_sidebar( array(
+      'name' => 'Sidebar Content 1',
+      'id' => 'sidebar-content-1',
+      'description' => 'Appears in the sidebar area',
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget' => '</aside>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+      ) );
+      register_sidebar( array(
+        'name' => 'Sidebar Content 2',
+        'id' => 'sidebar-content-2',
+        'description' => 'Appears in the sidebar area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+        ) );
 
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
 function excerpt_length( $length ) {
-  return 110;
+  return 60;
 }
 add_filter( 'excerpt_length', 'excerpt_length', 999 );
 
