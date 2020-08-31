@@ -4,56 +4,36 @@
 */
  
 get_header(); ?>
+<section class="page-cont">
 
-<section id="primary" class="site-content">
-    <div id="content" role="main">
-
-        <?php 
-// Check if there are any posts to display
-if ( have_posts() ) : ?>
-
-        <header class="archive-header">
-
-            <h1 class="archive-title">
-                <?php $cat = get_the_category(); echo $cat[0]->cat_name; ?>
-            </h1>
-
-
-
-            <?php
-// Display optional category description
- if ( category_description() ) : ?>
-            <div class="archive-meta"><?php echo category_description(); ?></div>
-            <?php endif; ?>
-        </header>
-
-        <?php
- 
-// The Loop
-while ( have_posts() ) : the_post(); ?>
-        <h2><a href="<?php the_permalink() ?>" rel="bookmark" class="post-title"
-                title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-
-        <small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
-        <?php the_post_thumbnail() ?>
-        <div class="entry">
-            <?php the_content(); ?>
-
-            <p class="postmetadata"><?php
-  comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
-?></p>
+    <div class="category-content" role="main">
+        <div class="adoption-heading">
+            <hr>
+            <img src="<?php bloginfo('template_url'); ?>/images/icons/icons8-cat-footprint.svg" />
+            <h1>Cats available for adoption</h1>
+            <hr>
         </div>
 
-        <?php endwhile; 
- 
-else: ?>
-        <p>Sorry, no posts matched your criteria.</p>
+        <?php 
+            $args = array ( 'category' => the_category_ID($echo = false), 'posts_per_page' => 5);
+            $myposts = get_posts( $args );
+            foreach( $myposts as $post ) :	setup_postdata($post);
+        ?>
+        <div class="cat-card">
+            <?php the_post_thumbnail() ?>
+            <div class="cat-card-content">
 
+                <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
 
-        <?php endif; ?>
+                <?php the_excerpt(400); ?>
+            </div>
+
+        </div>
+        <?php endforeach; ?>
     </div>
+
+    <?php get_sidebar(); ?>
 </section>
 
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
