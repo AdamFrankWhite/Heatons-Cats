@@ -10,7 +10,17 @@ get_header(); ?>
         <div class="adoption-heading">
             <hr>
             <img src="<?php bloginfo('template_url'); ?>/images/icons/icons8-cat-footprint.svg" />
-            <h1><span class="capitalise"><?php single_cat_title();?></span> available for adoption</h1>
+            <h1>
+                <?php if (is_category("success")) {
+                    echo "Success Stories";
+                } else if (is_category("cats") || is_category("kittens")){
+                    echo '<span class="capitalise">'; 
+                    single_cat_title();
+                    echo '</span> available for adoption';
+                } ?>
+
+
+            </h1>
             <hr>
         </div>
 

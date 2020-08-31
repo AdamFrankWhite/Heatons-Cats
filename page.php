@@ -4,13 +4,16 @@
 */
  
 get_header(); ?>
-<section id="primary" class="site-content">
+<section class="page-cont">
     <div id="content" role="main">
-        <h2>Hello</h2>
-        <?php the_title();?>
+        <img src="<?php bloginfo('template_url');?>/images/icons/icons8-cat-cage.svg" />
+        <h2><?php the_title();?></h2>
+
+        <?php the_content(); ?>
     </div>
+    <?php get_sidebar(); ?>
 </section>
 
 
-<!-- <?php get_sidebar(); ?> -->
+
 <?php get_footer(); ?>
