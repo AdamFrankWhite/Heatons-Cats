@@ -239,6 +239,36 @@ header a[href="index.php"] {
 
     .card {
         box-shadow: lightgray 0px 0px 10px;
+
+        .card-content {
+            padding: 1em;
+            h4 {
+                color: black;
+                font-size: 1.25em;
+                margin: 0.5em 0;
+            }
+        }
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        &:hover {
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+    }
+}
+
+#sidebar-gallery {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 1.25em;
+
+    .card {
+        box-shadow: lightgray 0px 0px 10px;
+
         .card-content {
             padding: 1em;
             h4 {

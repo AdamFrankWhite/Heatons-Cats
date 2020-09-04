@@ -267,6 +267,33 @@ header a[href="index.php"] {
   transition: opacity 0.3s;
 }
 
+#sidebar-gallery {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1.25em;
+}
+#sidebar-gallery .card {
+  box-shadow: lightgray 0px 0px 10px;
+}
+#sidebar-gallery .card .card-content {
+  padding: 1em;
+}
+#sidebar-gallery .card .card-content h4 {
+  color: black;
+  font-size: 1.25em;
+  margin: 0.5em 0;
+}
+#sidebar-gallery .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+#sidebar-gallery .card:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
 #left,
 #right {
   padding: 0.5em;
