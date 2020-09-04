@@ -384,15 +384,15 @@ header a[href="index.php"] {
     .blog-sidebar {
         flex-basis: 30%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+
         @media (max-width: 1049px) {
             margin-top: 3em;
         }
         flex-direction: column;
         @media (min-width: 775px) and (max-width: 1200px) {
             flex-direction: row;
-
+            justify-content: space-between;
             font-size: 1.5vw;
         }
     }
@@ -495,7 +495,8 @@ header a[href="index.php"] {
         display: block;
         margin: auto;
     }
-    .widget-title {
+    .widget-title,
+    h2 {
         border-bottom: 1px solid #707070;
         text-align: center;
         width: 70%;

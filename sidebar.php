@@ -1,13 +1,5 @@
 <div class="col-sm-4 col-sm-offset-1 blog-sidebar">
-    <?php 
-    if (!is_category("cats") && !is_category("kittens")) {
-        echo '<div class="cat-gallery-cont">
-                <i id="left" class="fa fa-chevron-circle-left" aria-hidden="true"></i>
-                <div id="sidebar-gallery"></div>
-                <i id="right" class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-            </div>';
-        };
-        ?>
+
 
 
     <div class="sidebar-module sidebar-module-inset adopt-side-widget">
@@ -22,6 +14,23 @@
         <img class="icon" src="<?php bloginfo('template_url');?>/images/icons/icons8-email-52.png" />
         <p class="email-text">purrs@heatonscats.org.uk</p>
     </div>
+    <!-- Check if page is not cat/kittens/single post -->
+    <?php 
+    if (!is_category("cats") && !is_category("kittens") && !is_single()) {
+       
+        echo '<div class="sidebar-module sidebar-module-inset adopt-side-widget">';
+        echo '<img class="icon" src="';
+        echo bloginfo('template_url');
+        echo'/images/icons/icons8-cat-caregivers.svg" />
+                <h2>Cats and kittens for adoption</h2>
+                <div class="cat-gallery-cont">
+                    <i id="left" class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+                    <div id="sidebar-gallery"></div>
+                    <i id="right" class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                </div>
+                </div>';
+        };
+        ?>
     <div class="sidebar-module sidebar-module-inset adopt-side-widget">
         <img class="icon" src="<?php bloginfo('template_url');?>/images/icons/icons8-cat-pot.svg" />
         <?php
