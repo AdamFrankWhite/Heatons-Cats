@@ -12,7 +12,9 @@
         <img class="icon" src="<?php bloginfo('template_url');?>/images/icons/icons8-phone-60.png" />
         <p class="phone-num">0161 975 0784</p>
         <img class="icon" src="<?php bloginfo('template_url');?>/images/icons/icons8-email-52.png" />
-        <p class="email-text">purrs@heatonscats.org.uk</p>
+        <a href="mailto:purrs@heatonscats.org.uk">
+            <p class="email-text">purrs@heatonscats.org.uk</p>
+        </a>
     </div>
     <!-- Check if page is not cat/kittens/single post -->
     <?php 

@@ -291,7 +291,7 @@ header a[href="index.php"] {
   object-fit: cover;
 }
 #sidebar-gallery .card:hover {
-  opacity: 0.6;
+  opacity: 0.8;
   transition: opacity 0.3s;
 }
 
@@ -472,9 +472,9 @@ header a[href="index.php"] {
   }
 }
 .cat-card .cat-card-content {
-  padding: 1em;
+  padding: 1em 1em 1em 0;
   overflow: hidden;
-  flex-basis: 70%;
+  flex-basis: 60%;
 }
 .cat-card .cat-card-content p {
   line-height: 1.25em;
@@ -490,7 +490,7 @@ header a[href="index.php"] {
 }
 @media (min-width: 1050px) {
   .cat-card a {
-    flex-basis: 30%;
+    flex-basis: 40%;
   }
 }
 .cat-card a:hover {
@@ -500,8 +500,8 @@ header a[href="index.php"] {
 .cat-card a .wp-post-image {
   height: 250px;
   width: 100%;
-  padding: 0.25em;
-  border-radius: 15px;
+  border: 0.75em solid transparent;
+  border-radius: 25px;
   object-fit: cover;
 }
 @media (min-width: 1050px) {
@@ -560,6 +560,10 @@ header a[href="index.php"] {
 }
 .adopt-side-widget .email-text {
   font-size: 1.5em;
+}
+.adopt-side-widget .email-text:hover {
+  color: orange;
+  transition: color 0.1s;
 }
 .adopt-side-widget .phone-num {
   font-size: 2.25em;
