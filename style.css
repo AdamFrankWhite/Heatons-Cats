@@ -472,9 +472,14 @@ header a[href="index.php"] {
   }
 }
 .cat-card .cat-card-content {
-  padding: 1em 1em 1em 0;
+  padding: 1em;
   overflow: hidden;
   flex-basis: 60%;
+}
+@media (min-width: 650px) {
+  .cat-card .cat-card-content {
+    padding: 1em 1em 1em 0;
+  }
 }
 .cat-card .cat-card-content p {
   line-height: 1.25em;

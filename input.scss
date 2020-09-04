@@ -447,7 +447,11 @@ header a[href="index.php"] {
     border-radius: 10px;
     margin-bottom: 1em;
     .cat-card-content {
-        padding: 1em 1em 1em 0;
+        padding: 1em;
+        @media (min-width: 650px) {
+            padding: 1em 1em 1em 0;
+        }
+
         overflow: hidden;
         flex-basis: 60%;
         p {
