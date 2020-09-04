@@ -39,7 +39,7 @@ h6 {
 
 body {
     font-size: 16px;
-    max-width: 1600px;
+    max-width: 1300px;
     margin: auto;
     background-color: white;
 }
@@ -93,7 +93,7 @@ nav li {
 
 .header_logo {
     border-radius: 15px;
-    height: 75px;
+    height: 90px;
     width: auto;
     margin: 0.75em;
 }
@@ -369,6 +369,7 @@ header a[href="index.php"] {
     margin: 2em auto 15em auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     @media (min-width: 1200px) {
         flex-direction: row;
         width: 90%;
@@ -376,21 +377,19 @@ header a[href="index.php"] {
     @media (min-width: 650px) and (max-width: 1199px) {
         width: 85%;
     }
-    justify-content: space-between;
 
     .category-content {
         flex-basis: 60%;
     }
     .blog-sidebar {
         flex-basis: 30%;
-        display: flex;
-        flex-direction: column;
 
         @media (max-width: 1049px) {
             margin-top: 3em;
         }
         flex-direction: column;
         @media (min-width: 775px) and (max-width: 1200px) {
+            display: flex;
             flex-direction: row;
             justify-content: space-between;
             font-size: 1.5vw;
@@ -398,11 +397,21 @@ header a[href="index.php"] {
     }
 }
 .category-content {
-    background-color: #eef2f5;
+    background-color: rgba(21, 212, 77, 0.1);
     border: 1px solid #707070;
     border-radius: 10px;
     padding: 2em;
     display: block;
+    p,
+    ul {
+        font-size: 1em;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        line-height: 1.25em;
+    }
+    h3 {
+        font-size: 1.25em;
+        margin-bottom: 0.25em;
+    }
     .adoption-heading {
         font-size: 1.5em;
         display: flex;
@@ -487,7 +496,7 @@ header a[href="index.php"] {
     border: 1px solid #707070;
     border-radius: 5px;
     box-shadow: 1px 1px 3px lightgray;
-    background-color: #eef2f5;
+    background-color: rgba(21, 212, 77, 0.1);
     a {
         color: orange;
     }
