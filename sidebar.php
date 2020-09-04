@@ -19,9 +19,9 @@
     if (!is_category("cats") && !is_category("kittens") && !is_single()) {
        
         echo '<div class="sidebar-module sidebar-module-inset adopt-side-widget">';
-        echo '<img class="icon" src="';
+        echo '<img class="icon icon-padding" src="';
         echo bloginfo('template_url');
-        echo'/images/icons/icons8-cat-caregivers.svg" />
+        echo'/images/icons/icons8-cat-footprint.svg" />
                 <h2>Cats and kittens for adoption</h2>
                 <div class="cat-gallery-cont">
                     <i id="left" class="fa fa-chevron-circle-left" aria-hidden="true"></i>
@@ -32,7 +32,7 @@
         };
         ?>
     <div class="sidebar-module sidebar-module-inset adopt-side-widget">
-        <img class="icon" src="<?php bloginfo('template_url');?>/images/icons/icons8-cat-pot.svg" />
+        <img class="icon icon-padding" src="<?php bloginfo('template_url');?>/images/icons/icons8-cat-pot.svg" />
         <?php
             if(is_active_sidebar('sidebar-content-2')){
                 dynamic_sidebar('sidebar-content-2');
