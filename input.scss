@@ -390,10 +390,11 @@ header a[href="index.php"] {
     }
 
     .category-content {
-        flex-basis: 60%;
+        width: 62%;
     }
     .blog-sidebar {
-        flex-basis: 30%;
+        width: 33%;
+        margin-left: 1em;
 
         @media (max-width: 1049px) {
             margin-top: 3em;
@@ -531,11 +532,11 @@ header a[href="index.php"] {
     h2 {
         border-bottom: 1px solid #707070;
         text-align: center;
-        width: 70%;
+        width: 90%;
         margin: auto;
         padding-bottom: 0.5em;
         color: $darkgreen;
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     .phone-num,
     .email-text {
@@ -549,14 +550,14 @@ header a[href="index.php"] {
         color: $lightgreen;
     }
     .email-text {
-        font-size: 1.5em;
+        font-size: 1.3em;
         &:hover {
             color: orange;
             transition: color 0.1s;
         }
     }
     .phone-num {
-        font-size: 2.25em;
+        font-size: 2em;
     }
 }
 

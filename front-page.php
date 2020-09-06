@@ -38,14 +38,14 @@
         <img src="<?php bloginfo('template_url'); ?>/images/icons/icons8-cat.svg">
         <h3>Adopt</h3>
         <p>Looking for a companion? After a friend for your other cat?</p>
-        <a href="">Learn more</a>
+        <a href="<?php bloginfo('template_url');?>/adoption-policy">Learn more</a>
     </div>
 
     <div class="card">
         <img src="<?php bloginfo('template_url'); ?>/images/icons/icons8-donate.svg">
         <h3>Donate</h3>
         <p>Every amount, no matter how small, all helps go towards caring for the cats.</p>
-        <a href="">Learn more</a>
+        <a href="<?php bloginfo('template_url');?>/about">Learn more</a>
     </div>
 
 
@@ -53,7 +53,7 @@
         <img src="<?php bloginfo('template_url'); ?>/images/icons/icons8-volunteering.svg">
         <h3>Volunteer</h3>
         <p>Want to help us raise money in our charity shop, or with our cats? </p>
-        <a href="">Learn more</a>
+        <a href="<?php bloginfo('template_url');?>/volunteer">Learn more</a>
     </div>
 
 </div>
