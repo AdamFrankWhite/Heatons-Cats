@@ -48,6 +48,10 @@ dynamic_sidebar('footer-sidebar-3');
         </a>
 
     </ul>
+    <div class="designed-by">
+        <p>Web Design by <a href="http://adamwhite.tech" target="_blank">Adam White</p></a>
+        <p>Powered by Wordpress</p>
+    </div>
 </footer>
 
 </body>
