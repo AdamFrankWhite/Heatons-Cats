@@ -388,7 +388,7 @@ header a[href="index.php"] {
 }
 .page-cont {
   width: 98%;
-  margin: 2em auto 15em auto;
+  margin: 1em auto 15em auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -406,11 +406,12 @@ header a[href="index.php"] {
   }
 }
 .page-cont .category-content {
-  width: 62%;
+  width: 63.5%;
 }
 .page-cont .blog-sidebar {
   width: 33%;
-  margin-left: 1em;
+  border-left: 2px solid #096a25;
+  padding-left: 1em;
   flex-direction: column;
 }
 @media (max-width: 1049px) {
@@ -551,7 +552,7 @@ header a[href="index.php"] {
 .adopt-side-widget h2 {
   border-bottom: 1px solid #707070;
   text-align: center;
-  width: 90%;
+  width: 80%;
   margin: auto;
   padding-bottom: 0.5em;
   color: #096a25;
@@ -577,6 +578,12 @@ header a[href="index.php"] {
 .adopt-side-widget .email-text:hover {
   color: orange;
   transition: color 0.1s;
+}
+.adopt-side-widget .just-giving img {
+  padding-top: 2em;
+}
+.adopt-side-widget .paypal-btn {
+  padding-top: 1em;
 }
 .adopt-side-widget .phone-num {
   font-size: 2em;
