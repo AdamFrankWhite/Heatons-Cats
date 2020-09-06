@@ -262,15 +262,22 @@ header a[href="index.php"] {
         }
     }
 }
-
+.no-padding {
+    padding: 1em 0 !important;
+}
 #sidebar-gallery {
     margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: 1.25em;
+    // display: grid;
+    // grid-template-columns: 1fr;
+    // grid-column-gap: 1.25em;
+    #left,
+    #right {
+        padding: 0.25em !important;
+    }
     .card {
         box-shadow: lightgray 0px 0px 10px;
         margin-top: 1.5em;
+        width: 100%;
 
         .card-content {
             padding: 1em;
@@ -293,12 +300,14 @@ header a[href="index.php"] {
 }
 #left,
 #right {
-    padding: 0.5em;
+    padding: 0.25em;
     font-size: 2em;
 }
 #left:hover,
 #right:hover {
     cursor: pointer;
+    color: orange;
+    transform: color 0.1s;
 }
 
 .sp-pc-post-box > .sp-pc-post-image img.sp-pc-post-img {
@@ -409,7 +418,7 @@ header a[href="index.php"] {
     }
 }
 .category-content {
-    background-color: rgba(200, 243, 213, 0.1);
+    background-color: rgba(207, 241, 218, 0.1);
     border: 1px solid #707070;
     border-radius: 10px;
     padding: 2em;
@@ -514,10 +523,10 @@ header a[href="index.php"] {
 
     padding: 2em;
     margin-bottom: 3em;
-    border: 1px solid #707070;
+    border: 1px solid #afafaf;
     border-radius: 5px;
-    box-shadow: 1px 1px 3px lightgray;
-    background-color: rgba(200, 243, 213, 0.1);
+    box-shadow: 1px 1px 3px rgb(231, 231, 231);
+    background-color: rgba(207, 241, 218, 0.1);
     a {
         color: orange;
     }
@@ -550,7 +559,7 @@ header a[href="index.php"] {
         color: $lightgreen;
     }
     .email-text {
-        font-size: 1.3em;
+        font-size: 1.25em;
         &:hover {
             color: orange;
             transition: color 0.1s;

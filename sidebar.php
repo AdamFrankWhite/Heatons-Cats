@@ -20,7 +20,7 @@
     <?php 
     if (!is_category("cats") && !is_category("kittens") && !is_single()) {
        
-        echo '<div class="sidebar-module sidebar-module-inset adopt-side-widget">';
+        echo '<div class="sidebar-module sidebar-module-inset adopt-side-widget no-padding">';
         echo '<img class="icon icon-padding" src="';
         echo bloginfo('template_url');
         echo'/images/icons/icons8-cat-footprint.svg" />
