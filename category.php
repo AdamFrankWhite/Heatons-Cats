@@ -25,7 +25,7 @@ get_header(); ?>
         </div>
 
         <?php 
-            $args = array ( 'category' => the_category_ID($echo = false), 'posts_per_page' => 5);
+            $args = array ( 'category' => the_category_ID($echo = false), 'posts_per_page' => 20);
             $myposts = get_posts( $args );
             foreach( $myposts as $post ) :	setup_postdata($post);
         ?>
@@ -39,7 +39,10 @@ get_header(); ?>
             </div>
 
         </div>
-        <?php endforeach; ?>
+        <?php endforeach; 
+        
+        ?>
+
     </div>
 
     <?php get_sidebar(); ?>

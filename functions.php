@@ -63,15 +63,24 @@ function arphabet_widgets_init() {
       'before_title' => '<h3 class="widget-title">',
       'after_title' => '</h3>',
       ) );
-      register_sidebar( array(
-        'name' => 'Sidebar Content 2',
-        'id' => 'sidebar-content-2',
-        'description' => 'Appears in the sidebar area',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
-        ) );
+    register_sidebar( array(
+      'name' => 'Sidebar Content 2',
+      'id' => 'sidebar-content-2',
+      'description' => 'Appears in the sidebar area',
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget' => '</aside>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+      ) );
+    register_sidebar( array(
+      'name' => 'Sidebar Content 3',
+      'id' => 'sidebar-content-3',
+      'description' => 'Appears in the sidebar area',
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget' => '</aside>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+      ) );
 
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
@@ -87,4 +96,11 @@ add_filter( 'excerpt_length', 'excerpt_length', 999 );
 //   return $html;
 // }
 // add_filter( 'post_thumbnail_html', 'wpdocs_post_image_html', 10, 3 );
+
+function your_themes_pagination(){
+  global $wp_query; 
+  echo paginate_links();
+}
+
+
 ?>

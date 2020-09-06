@@ -10,10 +10,24 @@
             It is our mission to care for and rehome the cats and kittens that we take in, helping them find their
             forever homes.
         </p>
+        <p>
+            We are so grateful to everyone who supports us and allow us to continue our care for all of our cats here at
+            the Heatons. Shop Opening Hours Tues-Sat 10.30-4pm Closed Sunday and Monday
+        </p>
         <p class="lead">
-            <a class="btn btn-1 btn-primary btn-lg" href="#" role="button">Cats</a>
-            <a class="btn btn-2 btn-primary btn-lg" href="#" role="button">Kittens</a>
-            <a class="btn btn-3 btn-primary btn-lg" href="#" role="button">Donate</a>
+            <?php 
+        $cats_id = get_cat_ID( 'cats' );
+        $kittens_id = get_cat_ID( 'kittens' );
+        $donate_id = get_cat_ID( 'donate' );
+ 
+ // Get the URL of this category
+ $cats_link = get_category_link( $cats_id );
+ $kittens_link = get_category_link( $kittens_id );
+ $donate_link = get_category_link( $donate_id );
+ ?>
+            <a class="btn btn-1 btn-primary btn-lg" href="<?php echo $cats_link; ?>" role="button">Cats</a>
+            <a class="btn btn-2 btn-primary btn-lg" href="<?php echo $kittens_link; ?>" role="button">Kittens</a>
+            <a class="btn btn-3 btn-primary btn-lg" href="<?php echo $donate_link; ?>" role="button">Donate</a>
         </p>
     </div>
 </div>
