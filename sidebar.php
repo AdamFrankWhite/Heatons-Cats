@@ -33,29 +33,33 @@
                 </div>';
         };
         ?>
-    <div class="sidebar-module sidebar-module-inset adopt-side-widget">
-        <img class="icon icon-padding" src="<?php bloginfo('template_url');?>/images/icons/icons8-cat-pot.svg" />
-        <?php
+    <div class="donate-info-tablet">
+        <div class="sidebar-module sidebar-module-inset adopt-side-widget">
+            <img class="icon icon-padding" src="<?php bloginfo('template_url');?>/images/icons/icons8-cat-pot.svg" />
+            <?php
             if(is_active_sidebar('sidebar-content-2')){
                 dynamic_sidebar('sidebar-content-2');
             }
         ?>
-    </div>
 
-    <div class="sidebar-module sidebar-module-inset adopt-side-widget">
+        </div>
 
-        <img class="icon icon-padding" src="<?php bloginfo('template_url');?>/images/icons/icons8-donate.svg" />
-        <h2>Donate</h2>
-        <a class="just-giving"
-            href="//widgets.justgiving.com/Button/Redirect?p=eyJJZCI6IjY4NmNhMTE5LWE5NDItNGM2Ni04NTYzLWFhMjc0NjJiMmFhOCIsIkNoYXJpdHlJZCI6MjM2NTcxNCwiU2l6ZSI6InMiLCJSZWZlcmVuY2UiOiJ3ZWJsaW5rIiwiVHlwZSI6IkRvbmF0ZSJ9"><img
-                src="//widgets.justgiving.com/Button?p=eyJJZCI6IjY4NmNhMTE5LWE5NDItNGM2Ni04NTYzLWFhMjc0NjJiMmFhOCIsIkNoYXJpdHlJZCI6MjM2NTcxNCwiU2l6ZSI6InMiLCJSZWZlcmVuY2UiOiJ3ZWJsaW5rIiwiVHlwZSI6IkRvbmF0ZSJ9" /></a>
-        <div class="paypal-btn" align="center">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd"
-                    type="hidden" value="_s-xclick" />
-                <input name="hosted_button_id" type="hidden" value="KSRRZPGV9FFR4" />
-                <input alt="PayPal – The safer, easier way to pay online." name="submit"
-                    src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png" type="image" />
-            </form>
+        <div class="sidebar-module sidebar-module-inset adopt-side-widget">
+
+            <img class="icon icon-padding" src="<?php bloginfo('template_url');?>/images/icons/icons8-donate.svg" />
+            <h2>Donate</h2>
+            <a class="just-giving"
+                href="//widgets.justgiving.com/Button/Redirect?p=eyJJZCI6IjY4NmNhMTE5LWE5NDItNGM2Ni04NTYzLWFhMjc0NjJiMmFhOCIsIkNoYXJpdHlJZCI6MjM2NTcxNCwiU2l6ZSI6InMiLCJSZWZlcmVuY2UiOiJ3ZWJsaW5rIiwiVHlwZSI6IkRvbmF0ZSJ9"><img
+                    src="//widgets.justgiving.com/Button?p=eyJJZCI6IjY4NmNhMTE5LWE5NDItNGM2Ni04NTYzLWFhMjc0NjJiMmFhOCIsIkNoYXJpdHlJZCI6MjM2NTcxNCwiU2l6ZSI6InMiLCJSZWZlcmVuY2UiOiJ3ZWJsaW5rIiwiVHlwZSI6IkRvbmF0ZSJ9" /></a>
+            <div class="paypal-btn" align="center">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd"
+                        type="hidden" value="_s-xclick" />
+                    <input name="hosted_button_id" type="hidden" value="KSRRZPGV9FFR4" />
+                    <input alt="PayPal – The safer, easier way to pay online." name="submit"
+                        src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_150x38.png"
+                        type="image" />
+                </form>
+            </div>
         </div>
     </div>
 
