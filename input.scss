@@ -7,7 +7,7 @@ Tags: heatons
 */
 
 $darkgreen: #096a25;
-$lightgreen: #0f9f39;
+$lightgreen: #089e35;
 
 * {
     box-sizing: border-box;
@@ -34,6 +34,8 @@ h4,
 h5,
 h6 {
     font-family: "Cooper", cursive;
+    font-weight: 600;
+    letter-spacing: 0.03em;
     color: $darkgreen;
 }
 
@@ -76,6 +78,9 @@ nav {
 }
 nav a {
     font-size: 1.25em;
+    @media (min-width: 1300px) {
+        font-size: 1.3em;
+    }
 }
 nav #menu-nav-menu {
     list-style-type: none;
@@ -129,6 +134,9 @@ header a[href="index.php"] {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 0%;
+    .opening-times {
+        font-weight: bold;
+    }
     .jumbo-content {
         width: 32%;
         border-radius: 15px;
@@ -718,7 +726,7 @@ footer .links-col-2 {
 }
 
 .social-media :hover {
-    color: white;
+    color: orange;
 }
 
 // .share-link {
@@ -742,9 +750,9 @@ footer .links-col-2 {
 .blog-nav ul > li {
     border-radius: 5px;
     text-align: center;
-    font-weight: bold;
+
     text-decoration: none;
-    letter-spacing: 1px;
+    letter-spacing: 0.07em;
 }
 
 .blog-nav .menu-item a:hover {

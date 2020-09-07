@@ -11,7 +11,7 @@
 
     <title><?php echo get_bloginfo( 'name' ); ?><?php echo get_bloginfo( 'description' ); ?></title>
     <script src="https://use.fontawesome.com/29ca1d87cd.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Merienda|Cooper" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Merienda|Cooper|Martel" rel="stylesheet">
     <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

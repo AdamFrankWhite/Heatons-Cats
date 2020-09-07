@@ -26,7 +26,15 @@ add_action( 'init', 'register_my_menu' );
  *
  */
 function arphabet_widgets_init() {
-
+  register_sidebar( array(
+    'name' => 'Jumbotron Text',
+    'id' => 'jumbotron-text',
+    'description' => 'Appears in the main header area',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+    ) );
 	register_sidebar( array(
     'name' => 'Footer Sidebar 1',
     'id' => 'footer-sidebar-1',

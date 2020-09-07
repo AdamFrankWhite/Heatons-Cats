@@ -31,6 +31,8 @@ h4,
 h5,
 h6 {
   font-family: "Cooper", cursive;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   color: #096a25;
 }
 
@@ -63,7 +65,7 @@ main p:first-child {
 }
 
 .nav-cont {
-  background-color: #0f9f39;
+  background-color: #089e35;
   color: white;
   font-family: "Cooper";
 }
@@ -75,6 +77,11 @@ nav {
 
 nav a {
   font-size: 1.25em;
+}
+@media (min-width: 1300px) {
+  nav a {
+    font-size: 1.3em;
+  }
 }
 
 nav #menu-nav-menu {
@@ -127,6 +134,9 @@ header a[href="index.php"] {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0%;
+}
+.jumbotron .opening-times {
+  font-weight: bold;
 }
 .jumbotron .jumbo-content {
   width: 32%;
@@ -182,7 +192,7 @@ header a[href="index.php"] {
   }
 }
 .features h3 {
-  color: #0f9f39;
+  color: #089e35;
   font-size: 2em;
 }
 .features img {
@@ -515,7 +525,7 @@ header a[href="index.php"] {
   line-height: 1.25em;
 }
 .cat-card .cat-card-content a {
-  color: #0f9f39;
+  color: #089e35;
 }
 .cat-card a {
   color: #053f15;
@@ -584,7 +594,7 @@ header a[href="index.php"] {
   font-family: Cooper, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: center;
   font-weight: bold;
-  color: #0f9f39;
+  color: #089e35;
 }
 @media (max-width: 850px) {
   .adopt-side-widget .phone-num,
@@ -736,7 +746,7 @@ footer .links-col-2 {
 }
 
 .social-media :hover {
-  color: white;
+  color: orange;
 }
 
 .blog-nav ul {
@@ -748,9 +758,8 @@ footer .links-col-2 {
 .blog-nav ul > li {
   border-radius: 5px;
   text-align: center;
-  font-weight: bold;
   text-decoration: none;
-  letter-spacing: 1px;
+  letter-spacing: 0.07em;
 }
 
 .blog-nav .menu-item a:hover {

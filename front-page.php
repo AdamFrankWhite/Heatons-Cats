@@ -1,8 +1,12 @@
 <?php get_header(); ?>
 <div style="background-image: url(<?php header_image(); ?>)" class="jumbotron">
     <div class="jumbo-content">
-        <h1 class="display-4">Welcome to Heatons Cats</h1>
-        <p class="lead">We are a registered cat adoption charity run by dedicated volunteers and workers who give their
+        <?php
+            if(is_active_sidebar('jumbotron-text')){
+                dynamic_sidebar('jumbotron-text');
+            }
+        ?>
+        <!-- <p class="lead">We are a registered cat adoption charity run by dedicated volunteers and workers who give their
             time, love and effort to help cats in need.
 
         </p>
@@ -13,7 +17,7 @@
         <p>
             We are so grateful to everyone who supports us and allow us to continue our care for all of our cats here at
             the Heatons. Shop Opening Hours Tues-Sat 10.30-4pm Closed Sunday and Monday
-        </p>
+        </p> -->
         <p class="lead">
             <?php 
         $cats_id = get_cat_ID( 'cats' );
@@ -27,7 +31,8 @@
  ?>
             <a class="btn btn-1 btn-primary btn-lg" href="<?php echo $cats_link; ?>" role="button">Cats</a>
             <a class="btn btn-2 btn-primary btn-lg" href="<?php echo $kittens_link; ?>" role="button">Kittens</a>
-            <a class="btn btn-3 btn-primary btn-lg" href="<?php echo $donate_link; ?>" role="button">Donate</a>
+            <a class="btn btn-3 btn-primary btn-lg" href="<?php bloginfo('template_url');?>/donate"
+                role="button">Donate</a>
         </p>
     </div>
 </div>
