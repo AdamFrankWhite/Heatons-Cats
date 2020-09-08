@@ -194,7 +194,7 @@ header {
 }
 
 .jumbotron {
-  height: 600px;
+  height: 550px;
   position: relative;
   background-image: url("images/kitten1.jpg");
   background-position: 35%;
@@ -207,31 +207,49 @@ header {
 }
 .jumbotron .jumbo-content {
   width: 90%;
+  height: fit-content;
   border-radius: 15px;
   position: absolute;
   left: 40px;
   bottom: 40px;
   background-color: rgba(255, 255, 255, 0.6);
-  padding: 0.25em;
+  padding: 0.5em;
 }
 @media (min-width: 800px) {
   .jumbotron .jumbo-content {
-    width: 32%;
+    width: 43%;
+    max-width: 425px;
   }
 }
-@media (max-width: 549px) {
+@media (max-width: 799px) {
   .jumbotron .jumbo-content {
     text-align: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
 .jumbotron .jumbo-content h1 {
   margin: 0.25em;
-  font-size: 3em;
+  font-size: 2.25em;
   color: #2c2c2c;
+}
+@media (min-width: 950px) {
+  .jumbotron .jumbo-content h1 {
+    font-size: 3em;
+  }
 }
 .jumbotron .jumbo-content p {
   margin: 0.75em;
   font-size: 1.1em;
+}
+.jumbotron .jumbo-content .btn-cont {
+  padding: 0.5em 0;
 }
 .jumbotron .btn {
   font-family: "Cooper";
@@ -295,7 +313,7 @@ header {
   }
 }
 .features .card p {
-  width: 70%;
+  width: 65%;
   margin: auto;
   text-align: center;
   font-size: 1.25em;
@@ -308,6 +326,9 @@ header {
   color: white;
   margin: 0.5em;
   font-family: "Cambria";
+}
+.features .card a:hover {
+  text-decoration: underline;
 }
 
 .cat-gallery-section {
@@ -363,6 +384,10 @@ header {
 #cat-gallery .card:hover {
   opacity: 0.6;
   transition: opacity 0.3s;
+}
+#cat-gallery .card:hover h4 {
+  color: orange;
+  transition: color 0.3s;
 }
 
 .no-padding {
@@ -512,6 +537,11 @@ header {
   justify-content: space-around;
   align-items: flex-start;
 }
+@media (min-width: 900px) and (max-width: 1049px) {
+  .page-cont {
+    width: 85%;
+  }
+}
 @media (min-width: 1050px) {
   .page-cont {
     flex-direction: row;
@@ -526,7 +556,11 @@ header {
 }
 .page-cont .category-content {
   flex: 70%;
-  margin-right: 1em;
+}
+@media (min-width: 1050px) {
+  .page-cont .category-content {
+    margin-right: 1em;
+  }
 }
 .page-cont .blog-sidebar {
   flex: 30%;
@@ -546,7 +580,7 @@ header {
 @media (min-width: 775px) and (max-width: 1050px) {
   .page-cont .blog-sidebar {
     display: grid;
-    font-size: 0.9em;
+    font-size: 1em;
     flex-grow: 1 1;
     grid-column-gap: 3%;
     grid-template-columns: 1fr 1fr;
@@ -561,16 +595,26 @@ header {
 
 .category-content {
   background-color: rgba(207, 241, 218, 0.1);
-  border: 1px solid #707070;
-  border-radius: 10px;
-  padding: 2em;
   display: block;
+}
+@media (min-width: 650px) {
+  .category-content {
+    border: 1px solid #707070;
+    border-radius: 10px;
+    padding: 2em;
+  }
 }
 .category-content p,
 .category-content ul {
   font-size: 1em;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   line-height: 1.25em;
+}
+@media (min-width: 500px) and (max-width: 750px) {
+  .category-content p,
+.category-content ul {
+    font-size: 0.95em;
+  }
 }
 .category-content h3 {
   font-size: 1.25em;
@@ -606,7 +650,7 @@ header {
   border-radius: 10px;
   margin-bottom: 1em;
 }
-@media (min-width: 650px) {
+@media (min-width: 500px) {
   .cat-card {
     flex-direction: row;
   }
@@ -629,13 +673,13 @@ header {
 }
 .cat-card a {
   color: #053f15;
-  flex-basis: 40%;
+  flex: 35%;
   font-size: 1.5em;
   font-family: Cooper, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 @media (min-width: 1050px) {
   .cat-card a {
-    flex-basis: 40%;
+    flex: 40%;
   }
 }
 .cat-card a:hover {
@@ -643,7 +687,7 @@ header {
   transition: color 0.15s;
 }
 .cat-card a .wp-post-image {
-  height: 250px;
+  height: 225px;
   width: 100%;
   border: 0.75em solid transparent;
   border-radius: 25px;

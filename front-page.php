@@ -18,7 +18,7 @@
             We are so grateful to everyone who supports us and allow us to continue our care for all of our cats here at
             the Heatons. Shop Opening Hours Tues-Sat 10.30-4pm Closed Sunday and Monday
         </p> -->
-        <p class="lead">
+        <p class="btn-cont">
             <?php 
         $cats_id = get_cat_ID( 'cats' );
         $kittens_id = get_cat_ID( 'kittens' );
