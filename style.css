@@ -544,7 +544,7 @@ header {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   display: block;
 }
-@media (min-width: 650px) {
+@media (min-width: 1050px) {
   .single-post {
     margin-right: 1em;
     padding: 1em 2em 2em 2em;
@@ -753,12 +753,26 @@ header {
 }
 
 .adopt-side-widget {
-  padding: 2em;
+  width: 100%;
+  margin: auto;
   margin-bottom: 3em;
   border: 1px solid #afafaf;
   border-radius: 5px;
   box-shadow: 1px 1px 3px #e7e7e7;
   background-color: rgba(207, 241, 218, 0.1);
+  padding: 1em;
+}
+@media (min-width: 425px) and (max-width: 549px) {
+  .adopt-side-widget {
+    width: 85%;
+    padding: 2em;
+  }
+}
+@media (min-width: 550px) and (max-width: 775px) {
+  .adopt-side-widget {
+    width: 75%;
+    margin: 2em auto;
+  }
 }
 .adopt-side-widget a {
   color: orange;
@@ -824,6 +838,7 @@ footer {
   width: 100%;
   background-color: #3b3b3b;
   font-family: "Arial Narrow", Arial, sans-serif;
+  margin: auto;
 }
 footer .footer-content {
   display: flex;
@@ -831,6 +846,12 @@ footer .footer-content {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 2em;
+  margin: auto;
+}
+@media (min-width: 550px) and (max-width: 799px) {
+  footer .footer-content {
+    width: 75%;
+  }
 }
 @media (min-width: 800px) {
   footer .footer-content {
