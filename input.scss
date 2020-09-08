@@ -133,9 +133,12 @@ nav li {
     text-decoration: none;
     letter-spacing: 0.07em;
 }
-
+.blog-nav .menu-item a {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
 .blog-nav .menu-item a:hover {
-    color: orange !important;
+    color: rgb(255, 230, 0) !important;
     transition: color 0.2s;
 }
 
@@ -759,7 +762,7 @@ footer {
         text-align: center;
     }
     a:hover {
-        color: orange !important;
+        color: rgb(255, 230, 0) !important;
     }
     .cat-1,
     .cat-2,
@@ -845,7 +848,7 @@ footer .links-col-2 {
 }
 
 .social-media :hover {
-    color: orange;
+    color: rgb(255, 230, 0);
 }
 
 .wp-post-image {

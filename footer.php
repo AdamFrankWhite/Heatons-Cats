@@ -49,8 +49,8 @@ dynamic_sidebar('footer-sidebar-3');
 
     </ul>
     <div class="designed-by">
-        <p>Web Design by <a href="http://adamwhite.tech" target="_blank">Adam White</p></a>
-        <p>Powered by Wordpress</p>
+        <p>Powered by Wordpress | Web Design by <a href="http://adamwhite.tech" target="_blank">Adam White</p></a>
+
     </div>
 </footer>
 <script src="<?php get_stylesheet_directory_uri() . '/js/burger-menu.js' ?>"></script>
