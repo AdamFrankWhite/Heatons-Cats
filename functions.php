@@ -15,6 +15,18 @@ function my_filter_head() {
    remove_action('wp_head', '_admin_bar_bump_cb');
 } 
 
+// Auto add featured image
+function wpsites_auto_set_featured_image() {
+  global $post;
+  $featured_image_exists = has_post_thumbnail($post->ID);
+     if (!$featured_image_exists)  {
+        $attached_image = get_children( "post_parent=$post->ID&post_type=attachment&post_mime_type=image&numberposts=1" );
+        if ($attached_image) {
+           foreach ($attached_image as $attachment_id => $attachment) {set_post_thumbnail($post->ID, $attachment_id);}
+        }
+     }
+}
+add_action('the_post', 'wpsites_auto_set_featured_image');
 
 function register_my_menu() {
   register_nav_menu('header-menu',__( 'Header Menu' ));

@@ -649,7 +649,7 @@ header {
   .category-content {
     border: 1px solid #707070;
     border-radius: 10px;
-    padding: 2em;
+    padding: 1em 2em;
   }
 }
 .category-content p,
@@ -696,7 +696,7 @@ header {
   border: gray solid 1px;
   box-shadow: lightgray 1px 1px 3px;
   border-radius: 10px;
-  margin-bottom: 1em;
+  margin-top: 1em;
 }
 @media (min-width: 500px) {
   .cat-card {
@@ -744,6 +744,7 @@ header {
 @media (min-width: 1050px) {
   .cat-card a .wp-post-image {
     height: 100%;
+    max-height: 265px;
     width: 100%;
   }
 }
@@ -760,7 +761,7 @@ header {
   border-radius: 5px;
   box-shadow: 1px 1px 3px #e7e7e7;
   background-color: rgba(207, 241, 218, 0.1);
-  padding: 1em;
+  padding: 2em 1em;
 }
 @media (min-width: 425px) and (max-width: 549px) {
   .adopt-side-widget {

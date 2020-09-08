@@ -595,7 +595,7 @@ header {
         border: 1px solid #707070;
         border-radius: 10px;
 
-        padding: 2em;
+        padding: 1em 2em;
     }
 
     display: block;
@@ -645,7 +645,7 @@ header {
     border: gray solid 1px;
     box-shadow: lightgray 1px 1px 3px;
     border-radius: 10px;
-    margin-bottom: 1em;
+    margin-top: 1em;
     .cat-card-content {
         padding: 1em;
         @media (min-width: 650px) {
@@ -679,6 +679,7 @@ header {
             width: 100%;
             @media (min-width: 1050px) {
                 height: 100%;
+                max-height: 265px;
                 width: 100%;
             }
             border: 0.75em solid transparent;
@@ -705,7 +706,7 @@ header {
     border-radius: 5px;
     box-shadow: 1px 1px 3px rgb(231, 231, 231);
     background-color: rgba(207, 241, 218, 0.1);
-    padding: 1em;
+    padding: 2em 1em;
     @media (min-width: 425px) and (max-width: 549px) {
         width: 85%;
         padding: 2em;
