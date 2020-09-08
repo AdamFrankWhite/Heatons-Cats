@@ -20,22 +20,24 @@
 
 
 <body>
-    <header class="nav-cont">
+    <header>
+        <div class="nav-cont">
 
-        <a href="<?php echo get_bloginfo( 'wpurl' );?>">
-            <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
+            <a href="<?php echo get_bloginfo( 'wpurl' );?>">
+                <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
 $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 echo '<img class="header_logo" src="'.$image[0].'">';?>
-        </a>
-        <a class="toggle-nav" href="#">&#9776;</a>
-        <div class=" blog-masthead">
-            <div class="container">
-                <nav class="blog-nav">
-                    <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+            </a>
+            <!-- &#9776; -->
+            <a id="toggle-nav" href="#">menu</a>
+            <div class=" blog-masthead">
+                <div class="container">
+                    <nav class="blog-nav">
+                        <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 
-                </nav>
+                    </nav>
+                </div>
             </div>
+
         </div>
-
-
     </header>

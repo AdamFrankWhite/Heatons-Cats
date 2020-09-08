@@ -66,18 +66,16 @@ main p:first-child {
     padding-left: 3px;
 }
 
-.nav-cont {
-    background-color: $lightgreen;
-    color: white;
-    font-family: "Cooper";
-}
-
 nav {
     margin: auto;
     text-transform: lowercase;
 }
 nav a {
     font-size: 1.25em;
+    @media (min-width: 550px) and (max-width: 1049px) {
+        font-size: 1.1em;
+    }
+
     @media (min-width: 1300px) {
         font-size: 1.3em;
     }
@@ -96,11 +94,49 @@ nav li {
     list-style: none;
 }
 
-.header_logo {
-    border-radius: 15px;
-    height: 90px;
-    width: auto;
-    margin: 0.75em;
+#toggle-nav {
+    // text-transform: uppercase;
+    font-size: 1em;
+    border: white solid 2px;
+    padding: 0.2em;
+    border-radius: 5px;
+    @media (min-width: 550px) {
+        display: none;
+    }
+}
+.show-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-nav ul {
+    display: none;
+    flex-direction: column;
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 0.9em;
+    @media (min-width: 500px) and (max-width: 1049px) {
+        margin-top: 0;
+    }
+    @media (min-width: 550px) {
+        display: flex;
+        flex-direction: row;
+        padding: 0.6em 0;
+        font-size: 1em;
+    }
+}
+
+.blog-nav ul > li {
+    border-radius: 5px;
+    text-align: center;
+
+    text-decoration: none;
+    letter-spacing: 0.07em;
+}
+
+.blog-nav .menu-item a:hover {
+    color: orange !important;
+    transition: color 0.2s;
 }
 
 /* #logo {
@@ -109,8 +145,31 @@ nav li {
   border-radius: 10%;
   margin-top: 1em;
 } */
-header a[href="index.php"] {
-    position: relative;
+header {
+    background-color: $lightgreen;
+}
+.nav-cont {
+    display: flex;
+    margin: auto 40px;
+    background-color: $lightgreen;
+    color: white;
+    font-family: "Cooper";
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 1050px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    a[href="index.php"] {
+        position: relative;
+    }
+    .header_logo {
+        border-radius: 15px;
+        height: 90px;
+        width: auto;
+        margin: 0.75em auto;
+    }
 }
 
 .title-the {
@@ -138,11 +197,18 @@ header a[href="index.php"] {
         font-weight: bold;
     }
     .jumbo-content {
-        width: 32%;
+        width: 90%;
+        @media (min-width: 800px) {
+            width: 32%;
+        }
+        @media (max-width: 549px) {
+            text-align: center;
+        }
+
         border-radius: 15px;
         position: absolute;
-        left: 50px;
-        bottom: 50px;
+        left: 40px;
+        bottom: 40px;
         background-color: rgba(255, 255, 255, 0.6);
         padding: 0.25em;
         h1 {
@@ -203,7 +269,15 @@ header a[href="index.php"] {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
+        @media (max-width: 549px) {
+            padding-top: 1.5em;
+        }
+        h3 {
+            @media (max-width: 549px) {
+                margin-top: 0;
+                margin-bottom: 0.5em;
+            }
+        }
         p {
             width: 70%;
             margin: auto;
@@ -369,13 +443,19 @@ header a[href="index.php"] {
             align-items: center;
             width: 100%;
             img {
-                padding: 1em;
+                padding-top: 1em;
+                @media (min-width: 550px) {
+                    padding: 1em;
+                }
                 width: 150px;
                 height: 150px;
             }
             .partner-card-content {
                 h4 {
                     font-weight: bold;
+                    @media (max-width: 549px) {
+                        margin-top: 0;
+                    }
                     @media (min-width: 1220px) {
                         margin: 0 auto 0.5em auto;
                     }
@@ -617,7 +697,7 @@ footer {
         // flex-direction: column;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         padding: 2em;
         // display: grid;
         // grid-template-columns: 1fr;
@@ -700,6 +780,9 @@ footer .footer-desc {
 
 footer .links-col-1,
 footer .links-col-2 {
+    @media (max-width: 799px) {
+        padding-left: 0;
+    }
     @media (min-width: 800px) {
         flex: 1;
     }
@@ -729,66 +812,10 @@ footer .links-col-2 {
     color: orange;
 }
 
-// .share-link {
-//     display: none !important;
-// }
-
-// /*# sourceMappingURL=output.css.map */
-
-// .row {
-//     margin: auto 4%;
-//     display: flex;
-//     justify-content: space-between;
-// }
-
-.blog-nav ul {
-    display: none;
-    flex-direction: column;
-    list-style: none;
-}
-
-.blog-nav ul > li {
-    border-radius: 5px;
-    text-align: center;
-
-    text-decoration: none;
-    letter-spacing: 0.07em;
-}
-
-.blog-nav .menu-item a:hover {
-    color: orange !important;
-    transition: color 0.2s;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .wp-post-image {
     width: 75%;
     max-width: 750px;
     height: auto;
-}
-
-@media (min-width: 1000px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .blog-nav ul {
-        display: flex;
-        flex-direction: row;
-        padding: 0.6em;
-        font-size: 1em;
-    }
-
-    .toggle-nav {
-        display: none;
-    }
 }
 
 /*# sourceMappingURL=main.css.map */
