@@ -12,7 +12,7 @@ get_header(); ?>
 
 
 
-        <p class="post-content-cont"><?php the_content(); ?></p>
+        <?php the_content(); ?>
     </div>
 
 

@@ -102,6 +102,7 @@ nav li {
   border: white solid 2px;
   padding: 0.2em;
   border-radius: 5px;
+  margin-bottom: 1em;
 }
 @media (min-width: 550px) {
   #toggle-nav {
@@ -536,20 +537,23 @@ header {
 }
 .single-post {
   background-color: rgba(207, 241, 218, 0.1);
-  margin-right: 1em;
-  padding: 2em;
+  border: 1px solid #afafaf;
+  border-radius: 5px;
+  padding: 1em;
+  padding-bottom: 2em;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   display: block;
 }
 @media (min-width: 650px) {
   .single-post {
-    border: 1px solid #707070;
-    border-radius: 10px;
-    padding: 1em 3em;
+    margin-right: 1em;
+    padding: 1em 2em 2em 2em;
   }
 }
 .single-post h1 {
   text-align: center;
   font-size: 2em;
+  margin: 0.5em auto;
 }
 .single-post img {
   width: 85%;
@@ -560,7 +564,13 @@ header {
   margin: 0 auto 1.25em auto;
   border-radius: 10px;
 }
-.single-post p {
+@media (max-width: 850px) {
+  .single-post img {
+    width: 100%;
+  }
+}
+.single-post p,
+.single-post div {
   width: 85%;
   margin: auto;
   padding-top: 0.75em;
