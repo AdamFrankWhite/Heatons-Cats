@@ -495,7 +495,40 @@ header {
         }
     }
 }
+// Single Post
 
+.single-post {
+    background-color: rgba(207, 241, 218, 0.1);
+    margin-right: 1em;
+    padding: 2em;
+    @media (min-width: 650px) {
+        border: 1px solid #707070;
+        border-radius: 10px;
+
+        padding: 1em 3em;
+    }
+
+    display: block;
+    h1 {
+        text-align: center;
+        font-size: 2em;
+    }
+    img {
+        width: 85%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 1.25em auto;
+        border-radius: 10px;
+    }
+    p {
+        width: 85%;
+        margin: auto;
+        padding-top: 0.75em;
+        text-align: justify;
+    }
+}
 //Pages
 
 .page-cont {
@@ -685,7 +718,7 @@ header {
         margin: auto;
         padding-bottom: 0.5em;
         color: $darkgreen;
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
     .phone-num,
     .email-text {
@@ -760,6 +793,7 @@ footer {
     }
     .designed-by {
         text-align: center;
+        padding-bottom: 1em;
     }
     a:hover {
         color: rgb(255, 230, 0) !important;

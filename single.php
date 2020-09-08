@@ -5,10 +5,14 @@
  
 get_header(); ?>
 <section class="page-cont">
-    <div>
+    <div class="single-post">
         <h1><?php the_title();?></h1>
+        <hr>
         <?php the_post_thumbnail(); ?>
-        <p><?php the_content(); ?></p>
+
+
+
+        <p class="post-content-cont"><?php the_content(); ?></p>
     </div>
 
 

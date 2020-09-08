@@ -534,6 +534,39 @@ header {
     margin: 0 auto 0.5em auto;
   }
 }
+.single-post {
+  background-color: rgba(207, 241, 218, 0.1);
+  margin-right: 1em;
+  padding: 2em;
+  display: block;
+}
+@media (min-width: 650px) {
+  .single-post {
+    border: 1px solid #707070;
+    border-radius: 10px;
+    padding: 1em 3em;
+  }
+}
+.single-post h1 {
+  text-align: center;
+  font-size: 2em;
+}
+.single-post img {
+  width: 85%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1.25em auto;
+  border-radius: 10px;
+}
+.single-post p {
+  width: 85%;
+  margin: auto;
+  padding-top: 0.75em;
+  text-align: justify;
+}
+
 .page-cont {
   width: 95%;
   margin: 1em auto 15em auto;
@@ -735,7 +768,7 @@ header {
   margin: auto;
   padding-bottom: 0.5em;
   color: #096a25;
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 .adopt-side-widget .phone-num,
 .adopt-side-widget .email-text {
@@ -807,6 +840,7 @@ footer p {
 }
 footer .designed-by {
   text-align: center;
+  padding-bottom: 1em;
 }
 footer a:hover {
   color: #ffe600 !important;
