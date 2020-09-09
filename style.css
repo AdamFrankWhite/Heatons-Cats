@@ -223,7 +223,7 @@ header {
   position: absolute;
   left: 40px;
   bottom: 40px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 0.5em;
 }
 @media (min-width: 800px) {
@@ -756,7 +756,7 @@ header {
 @media (min-width: 1050px) {
   .cat-card a .wp-post-image {
     height: 100%;
-    max-height: 265px;
+    max-height: 240px;
     width: 100%;
   }
 }
