@@ -4,12 +4,31 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title><?php echo get_bloginfo( 'name' ); ?><?php echo get_bloginfo( 'description' ); ?></title>
+    <title>
+        <?php 
+            $siteName = get_bloginfo('name');
+            $siteDescription = get_bloginfo('description');
+            
+            if ( is_front_page()) { 
+                echo "$siteName | $siteDescription";
+            
+            } elseif (is_category()) {
+                $cat = get_the_category();
+                $categoryName = $cat[0]->cat_name; 
+                echo ucfirst($categoryName) ." | " . $siteName;
+                
+            } elseif(is_single() || is_page()) {
+                $postName = the_title();
+                echo ucfirst($postName). " | " . $siteName; 
+            } else {
+                echo "$siteName | $siteDescription";
+            }
+            
+            
+        ?>
+    </title>
     <script src="https://use.fontawesome.com/29ca1d87cd.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Merienda|Cooper|Martel" rel="stylesheet">
     <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" rel="stylesheet">

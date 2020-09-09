@@ -105,6 +105,9 @@ function arphabet_widgets_init() {
 }
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
+
+
+
 function excerpt_length( $length ) {
   return 60;
 }

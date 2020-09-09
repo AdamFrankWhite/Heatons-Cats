@@ -88,6 +88,11 @@ nav #menu-nav-menu {
 
 nav li {
     padding: 0.5em 1em;
+    &:last-of-type {
+        @media (min-width: 1050px) {
+            padding-right: 0;
+        }
+    }
 }
 
 #navigation ul {
@@ -554,7 +559,7 @@ header {
     }
     @media (min-width: 1250px) {
         flex-direction: row;
-        width: 90%;
+        width: 85%;
     }
 
     .category-content {
@@ -838,7 +843,7 @@ footer {
         top: -120px;
     }
     .cat-3 {
-        right: 7%;
+        right: 4%;
         width: 120px;
         height: auto;
         top: -90px;
