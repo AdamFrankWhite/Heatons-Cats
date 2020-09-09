@@ -879,6 +879,9 @@ footer .designed-by {
   text-align: center;
   padding-bottom: 1em;
 }
+footer .designed-by p {
+  margin: 0.5em auto;
+}
 footer a:hover {
   color: #ffe600 !important;
 }

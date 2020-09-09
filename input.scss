@@ -820,6 +820,9 @@ footer {
     .designed-by {
         text-align: center;
         padding-bottom: 1em;
+        p {
+            margin: 0.5em auto;
+        }
     }
     a:hover {
         color: rgb(255, 230, 0) !important;

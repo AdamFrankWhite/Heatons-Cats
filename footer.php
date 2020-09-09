@@ -49,6 +49,7 @@ dynamic_sidebar('footer-sidebar-3');
 
     </ul>
     <div class="designed-by">
+        <p>&copy; 2020 Heatons Cats</p>
         <p>Powered by Wordpress | Web Design by <a href="http://adamwhite.tech" target="_blank">Adam White</p></a>
 
     </div>
