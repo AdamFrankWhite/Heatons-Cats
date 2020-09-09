@@ -693,6 +693,13 @@ header {
   width: 50px;
   height: auto;
 }
+.category-content .adoption-heading p {
+  font-size: 0.65em;
+  margin-bottom: 0;
+}
+.category-content .adoption-heading a {
+  color: #089e35;
+}
 
 .cat-card {
   display: flex;

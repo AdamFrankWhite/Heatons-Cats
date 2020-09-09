@@ -22,6 +22,7 @@ get_header(); ?>
 
             </h1>
             <hr>
+            <?php echo category_description(); ?>
         </div>
 
         <?php 

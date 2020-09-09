@@ -636,6 +636,13 @@ header {
             width: 50px;
             height: auto;
         }
+        p {
+            font-size: 0.65em;
+            margin-bottom: 0;
+        }
+        a {
+            color: $lightgreen;
+        }
     }
 }
 .cat-card {
