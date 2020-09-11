@@ -11,7 +11,7 @@ get_header(); ?>
     <div class="category-content" role="main">
         <div class="adoption-heading">
             <h3 style="text-transform: lowercase;">
-                Hmmm...can't find that one
+                Hmmm...page not found
             </h3>
             <hr>
             <img style="width: 60%; border-radius: 10px;"
