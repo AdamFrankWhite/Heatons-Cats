@@ -276,7 +276,7 @@ header {
   background-color: #053f15;
 }
 .jumbotron .btn-3 {
-  background-color: #7d0000;
+  background-color: #3e4fe4;
 }
 
 .features {
@@ -311,17 +311,11 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 1.5em;
 }
-@media (max-width: 549px) {
-  .features .card {
-    padding-top: 1.5em;
-  }
-}
-@media (max-width: 549px) {
-  .features .card h3 {
-    margin-top: 0;
-    margin-bottom: 0.5em;
-  }
+.features .card h3 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 .features .card p {
   width: 65%;
@@ -340,6 +334,9 @@ header {
 }
 .features .card a:hover {
   text-decoration: underline;
+}
+.features .card:nth-of-type(2) img {
+  padding-left: 1em;
 }
 
 .cat-gallery-section {
@@ -374,6 +371,7 @@ header {
 @media (max-width: 730px) {
   #cat-gallery {
     grid-template-columns: 1fr;
+    max-width: 375px;
   }
 }
 #cat-gallery .card {

@@ -262,7 +262,8 @@ header {
         background-color: #053f15;
     }
     .btn-3 {
-        background-color: #7d0000;
+        // background-color: #816a6a;
+        background-color: #3e4fe4;
     }
 }
 
@@ -295,14 +296,11 @@ header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        @media (max-width: 549px) {
-            padding-top: 1.5em;
-        }
+        padding-top: 1.5em;
+
         h3 {
-            @media (max-width: 549px) {
-                margin-top: 0;
-                margin-bottom: 0.5em;
-            }
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
         }
         p {
             width: 65%;
@@ -322,6 +320,9 @@ header {
                 text-decoration: underline;
             }
         }
+    }
+    .card:nth-of-type(2) img {
+        padding-left: 1em;
     }
 }
 
@@ -349,6 +350,7 @@ header {
     }
     @media (max-width: 730px) {
         grid-template-columns: 1fr;
+        max-width: 375px;
     }
 
     .card {
@@ -686,6 +688,7 @@ header {
             color: orange;
             transition: color 0.15s;
         }
+
         .wp-post-image {
             height: 225px;
             width: 100%;
