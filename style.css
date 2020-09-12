@@ -36,6 +36,13 @@ h6 {
   color: #096a25;
 }
 
+@media (max-width: 550px) {
+  h2,
+h3 {
+    text-align: center;
+  }
+}
+
 body {
   font-size: 16px;
   max-width: 1200px;
@@ -289,6 +296,11 @@ header {
   margin: 0.75em;
   font-size: 1.1em;
 }
+@media (max-width: 350px) {
+  .jumbotron .jumbo-content p {
+    font-size: 0.9em;
+  }
+}
 .jumbotron .jumbo-content .btn-cont {
   padding: 0.5em 0;
 }
@@ -317,6 +329,11 @@ header {
   flex-direction: column;
   justify-content: space-around;
 }
+@media (max-width: 350px) {
+  .features {
+    font-size: 0.9em;
+  }
+}
 @media (min-width: 800px) {
   .features {
     flex-direction: row;
@@ -335,6 +352,12 @@ header {
   width: 100px;
   height: auto;
   padding: 0.5em;
+}
+@media (max-width: 350px) {
+  .features img {
+    width: 75px;
+    height: auto;
+  }
 }
 .features .card {
   display: flex;
@@ -753,6 +776,11 @@ header {
   overflow: hidden;
   flex-basis: 60%;
 }
+@media (max-width: 500px) {
+  .cat-card .cat-card-content {
+    padding-top: 0;
+  }
+}
 @media (min-width: 650px) {
   .cat-card .cat-card-content {
     padding: 1em 1em 1em 0;
@@ -785,6 +813,11 @@ header {
   border: 0.75em solid transparent;
   border-radius: 25px;
   object-fit: cover;
+}
+@media (max-width: 500px) {
+  .cat-card a .wp-post-image {
+    height: 275px;
+  }
 }
 @media (min-width: 1050px) {
   .cat-card a .wp-post-image {
