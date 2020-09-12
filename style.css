@@ -635,7 +635,7 @@ header {
 }
 
 .page-cont {
-  width: 95%;
+  width: 98%;
   margin: 2em auto 15em auto;
   display: flex;
   flex-direction: column;
@@ -662,6 +662,11 @@ header {
 .page-cont .category-content {
   flex: 70%;
 }
+@media (max-width: 650px) {
+  .page-cont .category-content {
+    padding: 0.5em 1em;
+  }
+}
 @media (min-width: 1050px) {
   .page-cont .category-content {
     margin-right: 1em;
@@ -670,6 +675,13 @@ header {
 .page-cont .blog-sidebar {
   flex: 30%;
   flex-direction: column;
+}
+@media (max-width: 350px) {
+  .page-cont .blog-sidebar {
+    font-size: 0.85em;
+    padding: 0.5em 0.25em;
+    max-width: 310px;
+  }
 }
 @media (min-width: 1050px) {
   .page-cont .blog-sidebar {

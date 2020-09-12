@@ -598,7 +598,7 @@ header {
 //Pages
 
 .page-cont {
-    width: 95%;
+    width: 98%;
     margin: 2em auto 15em auto;
     display: flex;
     flex-direction: column;
@@ -618,11 +618,19 @@ header {
 
     .category-content {
         flex: 70%;
+        @media (max-width: 650px) {
+            padding: 0.5em 1em;
+        }
         @media (min-width: 1050px) {
             margin-right: 1em;
         }
     }
     .blog-sidebar {
+        @media (max-width: 350px) {
+            font-size: 0.85em;
+            padding: 0.5em 0.25em;
+            max-width: 310px;
+        }
         flex: 30%;
         @media (min-width: 1050px) {
             border-left: 2px solid $darkgreen;
