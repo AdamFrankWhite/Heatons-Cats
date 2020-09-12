@@ -7,8 +7,22 @@ function burger_menu_script() {
     wp_enqueue_script( 'burger-menu-script', get_stylesheet_directory_uri() . '/js/burger-menu.js', array( 'jquery' ), null );
   
 }
-add_action( 'wp_enqueue_scripts', 'burger_menu_script' ); 
 
+function cat_gallery_script() {
+     
+  wp_enqueue_script( 'cat-gallery-script', get_stylesheet_directory_uri() . '/js/cat-gallery.js', array( 'jquery' ), null );
+
+}
+
+function side_gallery_script() {
+     
+  wp_enqueue_script( 'side-gallery-script', get_stylesheet_directory_uri() . '/js/side-gallery.js', array( 'jquery' ), null );
+
+}
+
+add_action( 'wp_enqueue_scripts', 'burger_menu_script' ); 
+add_action( 'wp_enqueue_scripts', 'cat_gallery_script' );
+add_action( 'wp_enqueue_scripts', 'side_gallery_script' );
 add_action('get_header', 'my_filter_head');
 
 function my_filter_head() {
