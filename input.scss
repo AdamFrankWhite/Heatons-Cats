@@ -192,7 +192,28 @@ header {
         border-radius: 15px;
         height: 90px;
         width: auto;
-        margin: 0.75em auto;
+        margin: 0.9em auto 0.75em auto;
+        &:hover {
+            // transform: scale(1.2);
+            // transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: pulse 0.3s forwards;
+        }
+    }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
 }
 
@@ -562,7 +583,7 @@ header {
 
 .page-cont {
     width: 95%;
-    margin: 1em auto 15em auto;
+    margin: 2em auto 15em auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -614,13 +635,17 @@ header {
 .category-content {
     background-color: rgba(207, 241, 218, 0.1);
     @media (min-width: 650px) {
-        border: 1px solid #707070;
-        border-radius: 10px;
+        border: 1px solid #afafaf;
+        border-radius: 5px;
 
         padding: 1em 2em;
     }
 
     display: block;
+    a,
+    p a {
+        color: $lightgreen !important;
+    }
     p,
     ul {
         @media (min-width: 500px) and (max-width: 750px) {
@@ -730,13 +755,12 @@ header {
 
 .adopt-side-widget {
     width: 100%;
-    margin: auto;
     margin-bottom: 3em;
     border: 1px solid #afafaf;
     border-radius: 5px;
     box-shadow: 1px 1px 3px rgb(231, 231, 231);
     background-color: rgba(207, 241, 218, 0.1);
-    padding: 2em 1em;
+    padding: 1.5em;
     @media (min-width: 425px) and (max-width: 549px) {
         width: 85%;
         padding: 2em;
@@ -858,7 +882,7 @@ footer {
         }
     }
     a:hover {
-        color: $lightgreen !important;
+        text-decoration: underline;
     }
     .cat-1,
     .cat-2,

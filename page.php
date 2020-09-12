@@ -8,7 +8,6 @@ get_header(); ?>
     <div class="category-content" role="main">
         <div class="adoption-heading">
             <hr>
-            <!-- <img src="<?php bloginfo('template_url');?>/images/icons/icons8-cat-cage.svg" /> -->
             <?php the_post_thumbnail() ?>
             <h1><?php the_title();?></h1>
 
