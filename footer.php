@@ -54,7 +54,7 @@ dynamic_sidebar('footer-sidebar-3');
 
     </div>
 </footer>
-<script src="<?php get_stylesheet_directory_uri() . '/js/burger-menu.js' ?>"></script>
+
 </body>
 
 </html>
