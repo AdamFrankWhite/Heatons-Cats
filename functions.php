@@ -120,19 +120,11 @@ function arphabet_widgets_init() {
 add_action( 'widgets_init', 'arphabet_widgets_init' );
 
 
-
-
 function excerpt_length( $length ) {
   return 60;
 }
 add_filter( 'excerpt_length', 'excerpt_length', 999 );
 
-// Add permalink to images 
-// function wpdocs_post_image_html( $html, $post_id, $post_image_id ) {
-//   $html = '<a href="' . get_permalink( $post_id ) . '" alt="' . esc_attr( get_the_title( $post_id ) ) . '">' . $html . '</a>';
-//   return $html;
-// }
-// add_filter( 'post_thumbnail_html', 'wpdocs_post_image_html', 10, 3 );
 
 function your_themes_pagination(){
   global $wp_query; 

@@ -6,18 +6,6 @@
                 dynamic_sidebar('jumbotron-text');
             }
         ?>
-        <!-- <p class="lead">We are a registered cat adoption charity run by dedicated volunteers and workers who give their
-            time, love and effort to help cats in need.
-
-        </p>
-        <p>
-            It is our mission to care for and rehome the cats and kittens that we take in, helping them find their
-            forever homes.
-        </p>
-        <p>
-            We are so grateful to everyone who supports us and allow us to continue our care for all of our cats here at
-            the Heatons. Shop Opening Hours Tues-Sat 10.30-4pm Closed Sunday and Monday
-        </p> -->
         <p class="btn-cont">
             <?php 
         $cats_id = get_cat_ID( 'cats' );
@@ -121,21 +109,5 @@ $posts = get_posts($args);
         <?php endforeach; ?>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <?php wp_footer(); get_footer();?>

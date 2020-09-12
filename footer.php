@@ -11,10 +11,6 @@ dynamic_sidebar('footer-sidebar-1');
 ?>
         </ul>
         <ul class="links-col-1">
-            <!-- <h4>About</h3>
-                <li>One</li>
-                <li>Two</li>
-                <li>Three</li> -->
             <?php
 if(is_active_sidebar('footer-sidebar-2')){
 dynamic_sidebar('footer-sidebar-2');
@@ -22,10 +18,6 @@ dynamic_sidebar('footer-sidebar-2');
 ?>
         </ul>
         <ul class="links-col-2">
-            <!-- <h4>Quick Links</h3>
-                <li>One</li>
-                <li>Two</li>
-                <li>Three</li> -->
             <?php
 if(is_active_sidebar('footer-sidebar-3')){
 dynamic_sidebar('footer-sidebar-3');
@@ -34,9 +26,6 @@ dynamic_sidebar('footer-sidebar-3');
         </ul>
 
     </div>
-    <!-- <a target="_blank" href="https://icons8.com/icons/set/cat-cage--v2">Cat Cage</a>, <a target="_blank"
-        href="https://icons8.com/icons/set/cat-footprint">Cat Footprint</a> and other icons by <a target="_blank"
-        href="https://icons8.com">Icons8</a> -->
 
     <hr>
     <ul class="social-media">
