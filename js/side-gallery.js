@@ -1,7 +1,7 @@
 jQuery(document).ready(function() {
     //Perform Ajax request.
     jQuery.ajax({
-        url: "http://localhost/heatons/wp-json/wp/v2/posts?_embed",
+        url: "http://heatonscats.org.uk/wp-json/wp/v2/posts?_embed",
         type: "get",
         success: function(data) {
             const catPosts = data;

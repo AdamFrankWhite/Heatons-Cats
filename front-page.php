@@ -68,7 +68,7 @@
         <?php
         $args  = array(
     'posts_per_page'  => 5,
-    'category'        => 6,
+    'category'        => get_cat_ID( 'partners' ),
     'orderby'         => 'post_date',
     'order'           => 'ASC',
     'post_type'       => 'post',
@@ -91,7 +91,7 @@ $posts = get_posts($args);
         <?php
         $args  = array(
     'posts_per_page'  => 5,
-    'category'        => 7,
+    'category'        => get_cat_ID( 'notices' ),
     'orderby'         => 'post_date',
     'order'           => 'ASC',
     'post_type'       => 'post',
