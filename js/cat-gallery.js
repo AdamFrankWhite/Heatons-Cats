@@ -15,13 +15,14 @@ jQuery(document).ready(function() {
                         post.categories.includes(3)
                 )
                 .map(post => {
+                    let name = post.title.rendered.split("&#8211;");
                     return {
-                        name: post.title.rendered,
+                        name: name[0],
                         img_url: post.better_featured_image.source_url,
-                        link: post.link
+                        link: post.link,
+                        age: name[1] ? name[1] : ""
                     };
                 });
-            console.log(catGalleryData);
 
             function getGallery(numSlides = 4) {
                 let galleryHTML = "";
@@ -34,6 +35,7 @@ jQuery(document).ready(function() {
                         <div class="card-content">
                             <img src="${catPost.img_url}" alt=${catPost.name}/>
                             <h4>${catPost.name}</h4>
+							<p>${catPost.age}</p>
                         </div>
                     </div>
                 </a>
