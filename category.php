@@ -34,7 +34,15 @@ get_header(); ?>
             <a href="<?php the_permalink();?>"><?php the_post_thumbnail() ?></a>
             <div class="cat-card-content">
 
-                <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
+                <a href="<?php the_permalink();?>">
+                    <?php 
+			$str = $post->post_title;
+			$exp = explode("-",$str);
+			echo $exp[0]
+					?></a>
+                <p style="font-weight: bold; margin: 0 auto;">
+                    <?php echo $exp[1]; ?>
+                </p>
 
                 <?php the_excerpt(400); ?>
             </div>

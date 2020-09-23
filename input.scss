@@ -427,6 +427,10 @@ header {
         }
     }
 }
+#cat-gallery .card .card-content p {
+    color: black;
+    margin: 0.15em auto;
+}
 .no-padding {
     padding: 1em 0 !important;
 }
@@ -463,6 +467,12 @@ header {
         }
     }
 }
+#sidebar-gallery .card .card-content p {
+    color: black;
+    margin: 0.15em auto;
+    text-align: center;
+}
+
 #left,
 #right {
     padding: 0.25em;

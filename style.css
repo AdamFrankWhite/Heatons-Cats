@@ -449,6 +449,11 @@ header {
   transition: color 0.3s;
 }
 
+#cat-gallery .card .card-content p {
+  color: black;
+  margin: 0.15em auto;
+}
+
 .no-padding {
   padding: 1em 0 !important;
 }
@@ -481,6 +486,12 @@ header {
 #sidebar-gallery .card:hover {
   opacity: 0.8;
   transition: opacity 0.3s;
+}
+
+#sidebar-gallery .card .card-content p {
+  color: black;
+  margin: 0.15em auto;
+  text-align: center;
 }
 
 #left,
